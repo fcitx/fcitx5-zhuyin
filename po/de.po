@@ -1,18 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the fcitx5-zhuyin package.
 #
 # Translators:
-# mar well <marwell.1980@freenet.de>, 2013
-# mar well <m.wellendorf@gmx.de>, 2014,2017
+# csslayer <wengxt@gmail.com>, 2020
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-14 23:16-0700\n"
-"PO-Revision-Date: 2017-07-28 12:18+0000\n"
-"Last-Translator: mar well <m.wellendorf@gmx.de>\n"
-"Language-Team: German (http://www.transifex.com/fcitx/fcitx/language/de/)\n"
+"POT-Creation-Date: 2020-08-15 00:01-0700\n"
+"PO-Revision-Date: 2020-08-15 06:17+0000\n"
+"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Language-Team: German (https://www.transifex.com/fcitx/teams/12005/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,9 +60,8 @@ msgid "IBM"
 msgstr "IBM"
 
 #: src/zhuyinengine.h:61
-#, fuzzy
 msgid "Layout"
-msgstr "Zhuyin Layout"
+msgstr ""
 
 #: src/zhuyinengine.h:43
 msgid "Luoma"
@@ -73,9 +72,8 @@ msgid "Next Candidate"
 msgstr ""
 
 #: src/zhuyinengine.h:80
-#, fuzzy
 msgid "Next Page"
-msgstr "Zhuyin nächste Seite"
+msgstr ""
 
 #: src/zhuyinengine.h:63
 msgid "Page size"
@@ -94,9 +92,8 @@ msgid "Prev Candidate"
 msgstr ""
 
 #: src/zhuyinengine.h:74
-#, fuzzy
 msgid "Prev Page"
-msgstr "Zhuyin vorherige Seite"
+msgstr ""
 
 #: src/zhuyinengine.h:67
 msgid "QuickPhrase Trigger Key"
@@ -133,62 +130,3 @@ msgstr "Zhuyin"
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
 msgstr ""
-
-#~ msgid "Alt"
-#~ msgstr "Alt"
-
-#~ msgid "Ambiguity"
-#~ msgstr "Mehrdeutigkeit"
-
-#~ msgid "An <-> Ang"
-#~ msgstr "An <-> Ang"
-
-#~ msgid "Ci <-> Chi"
-#~ msgstr "Ci <-> Chi"
-
-#~ msgid "Ctrl"
-#~ msgstr "Ctrl"
-
-#~ msgid "En <-> Eng"
-#~ msgstr "En <-> Eng"
-
-#~ msgid "Fo <-> He"
-#~ msgstr "Fo <-> He"
-
-#~ msgid "Ge <-> Ke"
-#~ msgstr "Ge <-> Ke"
-
-#~ msgid "In <-> Ing"
-#~ msgstr "In <-> Ing"
-
-#~ msgid "Le <-> Ri"
-#~ msgstr "Le <-> Ri"
-
-#~ msgid "LibPinyin"
-#~ msgstr "LibPinyin"
-
-#~ msgid "LibPinyin Wrapper For Fcitx"
-#~ msgstr "LibPinyin Wrapper für Fcitx"
-
-#~ msgid "Ne <-> Le"
-#~ msgstr "Ne <-> Le"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Si <-> Shi"
-#~ msgstr "Si <-> Shi"
-
-#~ msgid "Use Incomplete Zhuyin"
-#~ msgstr "Unvollständiges Zhuyin zulassen"
-
-#~ msgid "Use Simplified Chinese Data for Zhuyin (Need Restart)"
-#~ msgstr ""
-#~ "Vereinfachtes Chinesisch für Zhuyin benutzen (Erfordert Neustart von "
-#~ "Fcitx)"
-
-#~ msgid "Use Tone"
-#~ msgstr "Töne benutzen"
-
-#~ msgid "Zi <-> Zhi"
-#~ msgstr "Zi <-> Zhi"
