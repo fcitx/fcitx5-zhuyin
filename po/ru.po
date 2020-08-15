@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-09 07:20-0700\n"
+"POT-Creation-Date: 2020-08-14 23:16-0700\n"
 "PO-Revision-Date: 2017-08-03 16:58+0000\n"
 "Last-Translator: TotalCaesar659 <x24cm5b8c54q6szxw@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/fcitx/fcitx/language/ru/)\n"
@@ -20,9 +20,112 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: src/eim.cpp:664 src/zhuyin.conf.in:3
+#: src/zhuyin.conf.in:3
 msgid "Bopomofo"
 msgstr "Бопомофо"
+
+#: src/zhuyinengine.h:43
+msgid "Dachen CP26"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "Eten"
+msgstr "Eten"
+
+#: src/zhuyinengine.h:41
+msgid "Eten26"
+msgstr "Eten26"
+
+#: src/zhuyinengine.h:95
+msgid "Fuzzy"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "GinYieh"
+msgstr "GinYieh"
+
+#: src/zhuyinengine.h:43
+msgid "Hanyu"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Hsu"
+msgstr "Hsu"
+
+#: src/zhuyinengine.h:42
+msgid "Hsu Dvorak"
+msgstr "Дворак Hsu"
+
+#: src/zhuyinengine.h:40
+msgid "IBM"
+msgstr "IBM"
+
+#: src/zhuyinengine.h:61
+#, fuzzy
+msgid "Layout"
+msgstr "Раскладка чжуинь"
+
+#: src/zhuyinengine.h:43
+msgid "Luoma"
+msgstr ""
+
+#: src/zhuyinengine.h:92
+msgid "Next Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:80
+#, fuzzy
+msgid "Next Page"
+msgstr "Следующая страница чжуинь"
+
+#: src/zhuyinengine.h:63
+msgid "Page size"
+msgstr ""
+
+#: src/zhuyinengine.cpp:183
+msgid "Press {} for {}"
+msgstr ""
+
+#: src/zhuyinengine.cpp:176
+msgid "Press {} for {} and Return for {}"
+msgstr ""
+
+#: src/zhuyinengine.h:86
+msgid "Prev Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:74
+#, fuzzy
+msgid "Prev Page"
+msgstr "Предыдущая страница чжуинь"
+
+#: src/zhuyinengine.h:67
+msgid "QuickPhrase Trigger Key"
+msgstr ""
+
+#: src/zhuyinengine.h:70
+msgid "QuickPhrase Trigger Key Symbol"
+msgstr ""
+
+#: src/zhuyinengine.h:62
+msgid "Require tone in zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:44
+msgid "Secondary Zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Standard"
+msgstr "Стандартный"
+
+#: src/zhuyinengine.h:42
+msgid "Standard Dvorak"
+msgstr "Дворак стандартный"
+
+#: src/zhuyinengine.h:65
+msgid "Use easy symbol"
+msgstr ""
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
@@ -50,29 +153,11 @@ msgstr ""
 #~ msgid "En <-> Eng"
 #~ msgstr "En <-> Eng"
 
-#~ msgid "Eten"
-#~ msgstr "Eten"
-
-#~ msgid "Eten26"
-#~ msgstr "Eten26"
-
 #~ msgid "Fo <-> He"
 #~ msgstr "Fo <-> He"
 
 #~ msgid "Ge <-> Ke"
 #~ msgstr "Ge <-> Ke"
-
-#~ msgid "GinYieh"
-#~ msgstr "GinYieh"
-
-#~ msgid "Hsu"
-#~ msgstr "Hsu"
-
-#~ msgid "Hsu Dvorak"
-#~ msgstr "Дворак Hsu"
-
-#~ msgid "IBM"
-#~ msgstr "IBM"
 
 #~ msgid "In <-> Ing"
 #~ msgstr "In <-> Ing"
@@ -95,12 +180,6 @@ msgstr ""
 #~ msgid "Si <-> Shi"
 #~ msgstr "Si <-> Shi"
 
-#~ msgid "Standard"
-#~ msgstr "Стандартный"
-
-#~ msgid "Standard Dvorak"
-#~ msgstr "Дворак стандартный"
-
 #~ msgid "Use Incomplete Zhuyin"
 #~ msgstr "Использовать неполный чжуинь"
 
@@ -111,15 +190,6 @@ msgstr ""
 
 #~ msgid "Use Tone"
 #~ msgstr "Использовать тон"
-
-#~ msgid "Zhuyin Layout"
-#~ msgstr "Раскладка чжуинь"
-
-#~ msgid "Zhuyin Next Page"
-#~ msgstr "Следующая страница чжуинь"
-
-#~ msgid "Zhuyin Prev Page"
-#~ msgstr "Предыдущая страница чжуинь"
 
 #~ msgid "Zhuyin candidate choosing modifiers (Not used for Eten26)"
 #~ msgstr ""

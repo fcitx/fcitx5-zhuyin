@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-09 07:20-0700\n"
+"POT-Creation-Date: 2020-08-14 23:16-0700\n"
 "PO-Revision-Date: 2017-07-15 13:04+0000\n"
 "Last-Translator: Bon Keun Seo <scobyseo@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/fcitx/fcitx/language/ko/)\n"
@@ -18,9 +18,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/eim.cpp:664 src/zhuyin.conf.in:3
+#: src/zhuyin.conf.in:3
 msgid "Bopomofo"
 msgstr "주음(Bopomofo)"
+
+#: src/zhuyinengine.h:43
+msgid "Dachen CP26"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "Eten"
+msgstr "Eten"
+
+#: src/zhuyinengine.h:41
+msgid "Eten26"
+msgstr "Eten26"
+
+#: src/zhuyinengine.h:95
+msgid "Fuzzy"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "GinYieh"
+msgstr "GinYieh"
+
+#: src/zhuyinengine.h:43
+msgid "Hanyu"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Hsu"
+msgstr "Hsu"
+
+#: src/zhuyinengine.h:42
+msgid "Hsu Dvorak"
+msgstr "Hsu 드보락"
+
+#: src/zhuyinengine.h:40
+msgid "IBM"
+msgstr "IBM"
+
+#: src/zhuyinengine.h:61
+#, fuzzy
+msgid "Layout"
+msgstr "주음 배열"
+
+#: src/zhuyinengine.h:43
+msgid "Luoma"
+msgstr ""
+
+#: src/zhuyinengine.h:92
+msgid "Next Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:80
+#, fuzzy
+msgid "Next Page"
+msgstr "주음 다음 페이지"
+
+#: src/zhuyinengine.h:63
+msgid "Page size"
+msgstr ""
+
+#: src/zhuyinengine.cpp:183
+msgid "Press {} for {}"
+msgstr ""
+
+#: src/zhuyinengine.cpp:176
+msgid "Press {} for {} and Return for {}"
+msgstr ""
+
+#: src/zhuyinengine.h:86
+msgid "Prev Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:74
+#, fuzzy
+msgid "Prev Page"
+msgstr "Zhuyin 이전 페이지"
+
+#: src/zhuyinengine.h:67
+msgid "QuickPhrase Trigger Key"
+msgstr ""
+
+#: src/zhuyinengine.h:70
+msgid "QuickPhrase Trigger Key Symbol"
+msgstr ""
+
+#: src/zhuyinengine.h:62
+msgid "Require tone in zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:44
+msgid "Secondary Zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Standard"
+msgstr "표준"
+
+#: src/zhuyinengine.h:42
+msgid "Standard Dvorak"
+msgstr "표준 드보락"
+
+#: src/zhuyinengine.h:65
+msgid "Use easy symbol"
+msgstr ""
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
@@ -42,33 +145,6 @@ msgstr ""
 #~ msgid "Use Incomplete Zhuyin"
 #~ msgstr "불완전한 Zhuyin 사용"
 
-#~ msgid "Zhuyin Layout"
-#~ msgstr "주음 배열"
-
-#~ msgid "Standard"
-#~ msgstr "표준"
-
-#~ msgid "IBM"
-#~ msgstr "IBM"
-
-#~ msgid "GinYieh"
-#~ msgstr "GinYieh"
-
-#~ msgid "Eten"
-#~ msgstr "Eten"
-
-#~ msgid "Eten26"
-#~ msgstr "Eten26"
-
-#~ msgid "Hsu"
-#~ msgstr "Hsu"
-
-#~ msgid "Standard Dvorak"
-#~ msgstr "표준 드보락"
-
-#~ msgid "Hsu Dvorak"
-#~ msgstr "Hsu 드보락"
-
 #~ msgid "Zhuyin candidate choosing modifiers (Not used for Eten26)"
 #~ msgstr "(Eten26이 사용하지 않는) Zhuyin 후보 선택 모디키"
 
@@ -80,12 +156,6 @@ msgstr ""
 
 #~ msgid "Shift"
 #~ msgstr "Shift"
-
-#~ msgid "Zhuyin Prev Page"
-#~ msgstr "Zhuyin 이전 페이지"
-
-#~ msgid "Zhuyin Next Page"
-#~ msgstr "주음 다음 페이지"
 
 #~ msgid "Use Simplified Chinese Data for Zhuyin (Need Restart)"
 #~ msgstr "입력기에 간체 데이터 사용 (재시작 필요)"

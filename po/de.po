@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-09 07:20-0700\n"
+"POT-Creation-Date: 2020-08-14 23:16-0700\n"
 "PO-Revision-Date: 2017-07-28 12:18+0000\n"
 "Last-Translator: mar well <m.wellendorf@gmx.de>\n"
 "Language-Team: German (http://www.transifex.com/fcitx/fcitx/language/de/)\n"
@@ -19,9 +19,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/eim.cpp:664 src/zhuyin.conf.in:3
+#: src/zhuyin.conf.in:3
 msgid "Bopomofo"
 msgstr "Bopomofo"
+
+#: src/zhuyinengine.h:43
+msgid "Dachen CP26"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "Eten"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "Eten26"
+msgstr ""
+
+#: src/zhuyinengine.h:95
+msgid "Fuzzy"
+msgstr ""
+
+#: src/zhuyinengine.h:41
+msgid "GinYieh"
+msgstr "GinYieh"
+
+#: src/zhuyinengine.h:43
+msgid "Hanyu"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Hsu"
+msgstr ""
+
+#: src/zhuyinengine.h:42
+msgid "Hsu Dvorak"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "IBM"
+msgstr "IBM"
+
+#: src/zhuyinengine.h:61
+#, fuzzy
+msgid "Layout"
+msgstr "Zhuyin Layout"
+
+#: src/zhuyinengine.h:43
+msgid "Luoma"
+msgstr ""
+
+#: src/zhuyinengine.h:92
+msgid "Next Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:80
+#, fuzzy
+msgid "Next Page"
+msgstr "Zhuyin nächste Seite"
+
+#: src/zhuyinengine.h:63
+msgid "Page size"
+msgstr ""
+
+#: src/zhuyinengine.cpp:183
+msgid "Press {} for {}"
+msgstr ""
+
+#: src/zhuyinengine.cpp:176
+msgid "Press {} for {} and Return for {}"
+msgstr ""
+
+#: src/zhuyinengine.h:86
+msgid "Prev Candidate"
+msgstr ""
+
+#: src/zhuyinengine.h:74
+#, fuzzy
+msgid "Prev Page"
+msgstr "Zhuyin vorherige Seite"
+
+#: src/zhuyinengine.h:67
+msgid "QuickPhrase Trigger Key"
+msgstr ""
+
+#: src/zhuyinengine.h:70
+msgid "QuickPhrase Trigger Key Symbol"
+msgstr ""
+
+#: src/zhuyinengine.h:62
+msgid "Require tone in zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:44
+msgid "Secondary Zhuyin"
+msgstr ""
+
+#: src/zhuyinengine.h:40
+msgid "Standard"
+msgstr "Standard"
+
+#: src/zhuyinengine.h:42
+msgid "Standard Dvorak"
+msgstr "Standard Dvorak"
+
+#: src/zhuyinengine.h:65
+msgid "Use easy symbol"
+msgstr ""
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
@@ -55,12 +158,6 @@ msgstr ""
 #~ msgid "Ge <-> Ke"
 #~ msgstr "Ge <-> Ke"
 
-#~ msgid "GinYieh"
-#~ msgstr "GinYieh"
-
-#~ msgid "IBM"
-#~ msgstr "IBM"
-
 #~ msgid "In <-> Ing"
 #~ msgstr "In <-> Ing"
 
@@ -82,12 +179,6 @@ msgstr ""
 #~ msgid "Si <-> Shi"
 #~ msgstr "Si <-> Shi"
 
-#~ msgid "Standard"
-#~ msgstr "Standard"
-
-#~ msgid "Standard Dvorak"
-#~ msgstr "Standard Dvorak"
-
 #~ msgid "Use Incomplete Zhuyin"
 #~ msgstr "Unvollständiges Zhuyin zulassen"
 
@@ -98,15 +189,6 @@ msgstr ""
 
 #~ msgid "Use Tone"
 #~ msgstr "Töne benutzen"
-
-#~ msgid "Zhuyin Layout"
-#~ msgstr "Zhuyin Layout"
-
-#~ msgid "Zhuyin Next Page"
-#~ msgstr "Zhuyin nächste Seite"
-
-#~ msgid "Zhuyin Prev Page"
-#~ msgstr "Zhuyin vorherige Seite"
 
 #~ msgid "Zi <-> Zhi"
 #~ msgstr "Zi <-> Zhi"
