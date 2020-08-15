@@ -221,7 +221,6 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
 }
 
 void ZhuyinState::updateUI(bool showCandidate) {
-    FCITX_INFO() << buffer_.dump();
     ic_->inputPanel().reset();
     Text preedit(buffer_.preedit());
     if (ic_->capabilityFlags().test(CapabilityFlag::Preedit)) {
