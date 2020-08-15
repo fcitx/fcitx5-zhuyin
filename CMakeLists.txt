@@ -1,33 +1,33 @@
-cmake_minimum_required(VERSION 2.8.6)
-project(fcitx-zhuyin)
+cmake_minimum_required(VERSION 3.4.0)
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+project(fcitx5-zhuyin VERSION 0.1.0)
 
-include(CheckCXXCompilerFlag)
+find_package(ECM REQUIRED 1.0.0)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+include(FeatureSummary)
+include(GNUInstallDirs)
+include(ECMSetupVersion)
+include(ECMUninstallTarget)
 
-check_cxx_compiler_flag("-std=c++11" SUPPORT_CXX11)
+find_package(Gettext REQUIRED)
+find_package(Fcitx5Core REQUIRED)
+find_package(Fcitx5Module REQUIRED COMPONENTS Notifications QuickPhrase)
+find_package(PkgConfig REQUIRED)
+find_package(fmt REQUIRED)
 
-if(NOT SUPPORT_CXX11)
-    message(FATAL_ERROR "need c++ 11 compatible compiler to compile")
-endif()
+if (TARGET fmt::fmt-header-only)
+  set(FMT_TARGET fmt::fmt-header-only)
+else()
+  set(FMT_TARGET fmt::fmt)
+endif ()
+pkg_check_modules(LibZhuyin REQUIRED IMPORTED_TARGET "libzhuyin>=2.3.0")
 
-find_package(Libintl REQUIRED)
-find_package(Fcitx 4.2.8 REQUIRED)
-find_package(GLIB2 REQUIRED)
-find_package(LibZhuyin REQUIRED)
+add_definitions(-DFCITX_GETTEXT_DOMAIN=\"fcitx5-zhuyin\")
 
-_fcitx_add_uninstall_target()
-
-set(CMAKE_C_FLAGS "-Wall -Wextra -fvisibility=hidden ${CMAKE_C_FLAGS}")
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -std=c++11 -fvisibility=hidden ${CMAKE_CXX_FLAGS}")
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined -Wl,--as-needed ${CMAKE_SHARED_LINKER_FLAGS}")
-set(CMAKE_MODULE_LINKER_FLAGS "-Wl,--as-needed ${CMAKE_MODULE_LINKER_FLAGS}")
-
-set(FCITX_LIBZHUYIN_ZHUYIN_DATADIR
-  "${FCITX4_PREFIX}/share/fcitx/libzhuyin/zhuyin_data")
-
-configure_file(config.h.in config.h)
+include("${FCITX_INSTALL_CMAKECONFIG_DIR}/Fcitx5Utils/Fcitx5CompilerSettings.cmake")
 
 add_subdirectory(po)
 add_subdirectory(src)
 add_subdirectory(data)
+enable_testing()
+add_subdirectory(test)

@@ -7,9 +7,9 @@
 # mar well <m.wellendorf@gmx.de>, 2014,2017
 msgid ""
 msgstr ""
-"Project-Id-Version: fcitx\n"
+"Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2017-07-28 06:03-0700\n"
+"POT-Creation-Date: 2020-08-09 07:20-0700\n"
 "PO-Revision-Date: 2017-07-28 12:18+0000\n"
 "Last-Translator: mar well <m.wellendorf@gmx.de>\n"
 "Language-Team: German (http://www.transifex.com/fcitx/fcitx/language/de/)\n"
@@ -19,140 +19,94 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/fcitx-zhuyin.desc:29
-msgid "Alt"
-msgstr "Alt"
-
-#: src/fcitx-zhuyin.desc:49 src/fcitx-zhuyin.desc:54 src/fcitx-zhuyin.desc:59
-#: src/fcitx-zhuyin.desc:64 src/fcitx-zhuyin.desc:69 src/fcitx-zhuyin.desc:74
-#: src/fcitx-zhuyin.desc:79 src/fcitx-zhuyin.desc:84 src/fcitx-zhuyin.desc:89
-#: src/fcitx-zhuyin.desc:94
-msgid "Ambiguity"
-msgstr "Mehrdeutigkeit"
-
-#: src/fcitx-zhuyin.desc:85
-msgid "An <-> Ang"
-msgstr "An <-> Ang"
-
-#: src/eim.cpp:676 src/zhuyin.conf.in:3
+#: src/eim.cpp:664 src/zhuyin.conf.in:3
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: src/fcitx-zhuyin.desc:50
-msgid "Ci <-> Chi"
-msgstr "Ci <-> Chi"
-
-#: src/fcitx-zhuyin.desc:28
-msgid "Ctrl"
-msgstr "Ctrl"
-
-#: src/fcitx-zhuyin.desc:90
-msgid "En <-> Eng"
-msgstr "En <-> Eng"
-
-#: src/fcitx-zhuyin.desc:17
-msgid "Eten"
-msgstr ""
-
-#: src/fcitx-zhuyin.desc:18
-msgid "Eten26"
-msgstr ""
-
-#: src/fcitx-zhuyin.desc:70
-msgid "Fo <-> He"
-msgstr "Fo <-> He"
-
-#: src/fcitx-zhuyin.desc:80
-msgid "Ge <-> Ke"
-msgstr "Ge <-> Ke"
-
-#: src/fcitx-zhuyin.desc:16
-msgid "GinYieh"
-msgstr "GinYieh"
-
-#: src/fcitx-zhuyin.desc:19
-msgid "Hsu"
-msgstr ""
-
-#: src/fcitx-zhuyin.desc:21
-msgid "Hsu Dvorak"
-msgstr ""
-
-#: src/fcitx-zhuyin.desc:15
-msgid "IBM"
-msgstr "IBM"
-
-#: src/fcitx-zhuyin.desc:95
-msgid "In <-> Ing"
-msgstr "In <-> Ing"
-
-#: src/fcitx-zhuyin.desc:75
-msgid "Le <-> Ri"
-msgstr "Le <-> Ri"
-
-#: src/fcitx-zhuyin.conf.in:3
-msgid "LibPinyin"
-msgstr "LibPinyin"
-
-#: src/fcitx-zhuyin.conf.in:4
-msgid "LibPinyin Wrapper For Fcitx"
-msgstr "LibPinyin Wrapper für Fcitx"
-
-#: src/fcitx-zhuyin.desc:65
-msgid "Ne <-> Le"
-msgstr "Ne <-> Le"
-
-#: src/fcitx-zhuyin.desc:30
-msgid "Shift"
-msgstr "Shift"
-
-#: src/fcitx-zhuyin.desc:60
-msgid "Si <-> Shi"
-msgstr "Si <-> Shi"
-
-#: src/fcitx-zhuyin.desc:14
-msgid "Standard"
-msgstr "Standard"
-
-#: src/fcitx-zhuyin.desc:20
-msgid "Standard Dvorak"
-msgstr "Standard Dvorak"
-
-#: src/fcitx-zhuyin.desc:7
-msgid "Use Incomplete Zhuyin"
-msgstr "Unvollständiges Zhuyin zulassen"
-
-#: src/fcitx-zhuyin.desc:45
-msgid "Use Simplified Chinese Data for Zhuyin (Need Restart)"
-msgstr ""
-"Vereinfachtes Chinesisch für Zhuyin benutzen (Erfordert Neustart von Fcitx)"
-
-#: src/fcitx-zhuyin.desc:2
-msgid "Use Tone"
-msgstr "Töne benutzen"
-
-#: src/fcitx-zhuyin.desc:1 src/fcitx-zhuyin.desc:6 src/fcitx-zhuyin.desc:11
-#: src/fcitx-zhuyin.desc:25 src/fcitx-zhuyin.desc:34 src/fcitx-zhuyin.desc:39
-#: src/fcitx-zhuyin.desc:44
+#: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
 msgstr "Zhuyin"
 
-#: src/fcitx-zhuyin.desc:12
-msgid "Zhuyin Layout"
-msgstr "Zhuyin Layout"
-
-#: src/fcitx-zhuyin.desc:40
-msgid "Zhuyin Next Page"
-msgstr "Zhuyin nächste Seite"
-
-#: src/fcitx-zhuyin.desc:35
-msgid "Zhuyin Prev Page"
-msgstr "Zhuyin vorherige Seite"
-
-#: src/fcitx-zhuyin.desc:26
-msgid "Zhuyin candidate choosing modifiers (Not used for Eten26)"
+#: src/zhuyin-addon.conf.in:4
+msgid "Zhuyin Input Method"
 msgstr ""
 
-#: src/fcitx-zhuyin.desc:55
-msgid "Zi <-> Zhi"
-msgstr "Zi <-> Zhi"
+#~ msgid "Alt"
+#~ msgstr "Alt"
+
+#~ msgid "Ambiguity"
+#~ msgstr "Mehrdeutigkeit"
+
+#~ msgid "An <-> Ang"
+#~ msgstr "An <-> Ang"
+
+#~ msgid "Ci <-> Chi"
+#~ msgstr "Ci <-> Chi"
+
+#~ msgid "Ctrl"
+#~ msgstr "Ctrl"
+
+#~ msgid "En <-> Eng"
+#~ msgstr "En <-> Eng"
+
+#~ msgid "Fo <-> He"
+#~ msgstr "Fo <-> He"
+
+#~ msgid "Ge <-> Ke"
+#~ msgstr "Ge <-> Ke"
+
+#~ msgid "GinYieh"
+#~ msgstr "GinYieh"
+
+#~ msgid "IBM"
+#~ msgstr "IBM"
+
+#~ msgid "In <-> Ing"
+#~ msgstr "In <-> Ing"
+
+#~ msgid "Le <-> Ri"
+#~ msgstr "Le <-> Ri"
+
+#~ msgid "LibPinyin"
+#~ msgstr "LibPinyin"
+
+#~ msgid "LibPinyin Wrapper For Fcitx"
+#~ msgstr "LibPinyin Wrapper für Fcitx"
+
+#~ msgid "Ne <-> Le"
+#~ msgstr "Ne <-> Le"
+
+#~ msgid "Shift"
+#~ msgstr "Shift"
+
+#~ msgid "Si <-> Shi"
+#~ msgstr "Si <-> Shi"
+
+#~ msgid "Standard"
+#~ msgstr "Standard"
+
+#~ msgid "Standard Dvorak"
+#~ msgstr "Standard Dvorak"
+
+#~ msgid "Use Incomplete Zhuyin"
+#~ msgstr "Unvollständiges Zhuyin zulassen"
+
+#~ msgid "Use Simplified Chinese Data for Zhuyin (Need Restart)"
+#~ msgstr ""
+#~ "Vereinfachtes Chinesisch für Zhuyin benutzen (Erfordert Neustart von "
+#~ "Fcitx)"
+
+#~ msgid "Use Tone"
+#~ msgstr "Töne benutzen"
+
+#~ msgid "Zhuyin Layout"
+#~ msgstr "Zhuyin Layout"
+
+#~ msgid "Zhuyin Next Page"
+#~ msgstr "Zhuyin nächste Seite"
+
+#~ msgid "Zhuyin Prev Page"
+#~ msgstr "Zhuyin vorherige Seite"
+
+#~ msgid "Zi <-> Zhi"
+#~ msgstr "Zi <-> Zhi"
