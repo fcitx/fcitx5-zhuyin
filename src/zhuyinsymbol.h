@@ -7,6 +7,7 @@
 #ifndef _FCITX5_ZHUYIN_ZHUYINSYMBOL_H_
 #define _FCITX5_ZHUYIN_ZHUYINSYMBOL_H_
 
+#include <cstdio>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -16,7 +17,7 @@ namespace fcitx {
 class ZhuyinSymbol {
 public:
     ZhuyinSymbol();
-    void load();
+    void load(std::FILE *file);
     const std::vector<std::string> &lookup(const std::string &key) const;
     void initBuiltin();
     void clear();

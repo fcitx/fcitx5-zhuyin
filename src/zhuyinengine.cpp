@@ -13,6 +13,7 @@
 #include <fcitx/instance.h>
 #include <fcitx/statusarea.h>
 #include <fcitx/userinterfacemanager.h>
+#include <fcntl.h>
 #include <fmt/format.h>
 #include <zhuyin.h>
 
@@ -312,8 +313,18 @@ const Configuration *ZhuyinEngine::getConfig() const { return &config_; }
 
 void ZhuyinEngine::reloadConfig() {
     readAsIni(config_, "conf/zhuyin.conf");
+    // Keep fd live before fclose.
+    StandardPathFile fd;
+    UniqueFilePtr file;
+    if (*config_.useEasySymbol) {
+        fd = StandardPath::global().open(StandardPath::Type::PkgData,
+                                         "zhuyin/easysymbols.txt", O_RDONLY);
+        if (fd.fd() >= 0) {
+            file.reset(fdopen(fd.fd(), "r"));
+        }
+    }
+    symbol_.load(file.get());
 
-    symbol_.load();
     isZhuyin_ = true;
     ZhuyinScheme scheme = ZHUYIN_STANDARD;
     FullPinyinScheme pyScheme = FULL_PINYIN_HANYU;

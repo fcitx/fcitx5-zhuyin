@@ -7,8 +7,7 @@
 #include "zhuyinsymbol.h"
 #include <fcitx-utils/log.h>
 #include <fcitx-utils/macros.h>
-#include <fcitx-utils/standardpath.h>
-#include <fcntl.h>
+#include <fcitx-utils/stringutils.h>
 
 namespace fcitx {
 
@@ -26,15 +25,20 @@ ZhuyinSymbol::lookup(const std::string &key) const {
     return empty;
 }
 
-void ZhuyinSymbol::load() {
+void ZhuyinSymbol::load(std::FILE *file) {
     symbols_.clear();
     initBuiltin();
-    auto fd = StandardPath::global().open(StandardPath::Type::PkgData,
-                                          "zhuyin/easysymbols.txt", O_RDONLY);
-    UniqueFilePtr file{fdopen(fd.fd(), "r")};
+
+    if (!file) {
+        for (char c = 'A'; c <= 'Z'; c++) {
+            char latin[] = {c, '\0'};
+            symbols_.erase(latin);
+        }
+        return;
+    }
     UniqueCPtr<char> line;
     size_t size = 0;
-    while (getline(line, &size, file.get()) >= 0) {
+    while (getline(line, &size, file) >= 0) {
         auto trimmed = stringutils::trim(line.get());
         if (trimmed.empty()) {
             continue;
