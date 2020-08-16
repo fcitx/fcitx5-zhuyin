@@ -4,14 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
+# 黃柏諺 <s8321414@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-15 00:01-0700\n"
+"POT-Creation-Date: 2020-08-16 00:01-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/fcitx/teams/12005/"
 "zh_TW/)\n"
 "Language: zh_TW\n"
@@ -26,7 +27,7 @@ msgstr "ㄅㄆㄇㄈ"
 
 #: src/zhuyinengine.h:43
 msgid "Dachen CP26"
-msgstr ""
+msgstr "Dachen CP26"
 
 #: src/zhuyinengine.h:41
 msgid "Eten"
@@ -38,7 +39,7 @@ msgstr "倚天26"
 
 #: src/zhuyinengine.h:95
 msgid "Fuzzy"
-msgstr ""
+msgstr "模糊"
 
 #: src/zhuyinengine.h:41
 msgid "GinYieh"
@@ -46,7 +47,7 @@ msgstr "精業"
 
 #: src/zhuyinengine.h:43
 msgid "Hanyu"
-msgstr ""
+msgstr "Hanyu"
 
 #: src/zhuyinengine.h:40
 msgid "Hsu"
@@ -62,55 +63,55 @@ msgstr "IBM"
 
 #: src/zhuyinengine.h:61
 msgid "Layout"
-msgstr ""
+msgstr "佈局"
 
 #: src/zhuyinengine.h:43
 msgid "Luoma"
-msgstr ""
+msgstr "Luoma"
 
 #: src/zhuyinengine.h:92
 msgid "Next Candidate"
-msgstr ""
+msgstr "下一個候選字"
 
 #: src/zhuyinengine.h:80
 msgid "Next Page"
-msgstr ""
+msgstr "下一頁"
 
 #: src/zhuyinengine.h:63
 msgid "Page size"
-msgstr ""
+msgstr "頁面大小"
 
-#: src/zhuyinengine.cpp:183
+#: src/zhuyinengine.cpp:184
 msgid "Press {} for {}"
-msgstr ""
+msgstr "按 {} 進入 {}"
 
-#: src/zhuyinengine.cpp:176
+#: src/zhuyinengine.cpp:177
 msgid "Press {} for {} and Return for {}"
-msgstr ""
+msgstr "按 {} 進入 {} 與 Return 進入 {}"
 
 #: src/zhuyinengine.h:86
 msgid "Prev Candidate"
-msgstr ""
+msgstr "上一個候選字"
 
 #: src/zhuyinengine.h:74
 msgid "Prev Page"
-msgstr ""
+msgstr "上一頁"
 
 #: src/zhuyinengine.h:67
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "快速輸入切換鍵"
 
 #: src/zhuyinengine.h:70
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "快速輸入切換鍵符號"
 
 #: src/zhuyinengine.h:62
 msgid "Require tone in zhuyin"
-msgstr ""
+msgstr "在注音中需要聲調"
 
 #: src/zhuyinengine.h:44
 msgid "Secondary Zhuyin"
-msgstr ""
+msgstr "次要注音"
 
 #: src/zhuyinengine.h:40
 msgid "Standard"
@@ -122,7 +123,7 @@ msgstr "標準 Dvorak"
 
 #: src/zhuyinengine.h:65
 msgid "Use easy symbol"
-msgstr ""
+msgstr "使用簡易符號"
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
@@ -130,4 +131,4 @@ msgstr "注音"
 
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
-msgstr ""
+msgstr "注音輸入法"
