@@ -60,6 +60,9 @@ FCITX_CONFIGURATION(
     OptionWithAnnotation<Scheme, SchemeI18NAnnotation> layout{
         this, "Layout", _("Layout"), Scheme::Standard};
     Option<bool> needTone{this, "NeedTone", _("Require tone in zhuyin"), true};
+    Option<bool> commitOnSwitch{
+        this, "CommitOnSwitch",
+        _("Commit current preedit when switching to other input method"), true};
     Option<int, IntConstrain> pageSize{this, "PageSize", _("Page size"), 10,
                                        IntConstrain(3, 10)};
     Option<bool> useEasySymbol{this, "EasySymbol", _("Use easy symbol"), true};
@@ -102,6 +105,7 @@ public:
 
     void keyEvent(KeyEvent &keyEvent);
     void reset();
+    void commit();
 
     void updateUI(bool showCandidate = false);
 

@@ -32,6 +32,12 @@ void ZhuyinState::reset() {
     updateUI();
 }
 
+void ZhuyinState::commit() {
+    ic_->commitString(buffer_.text());
+    buffer_.learn();
+    reset();
+}
+
 void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
     auto ic = keyEvent.inputContext();
     auto key = keyEvent.key();
@@ -123,9 +129,7 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
             return keyEvent.filterAndAccept();
         }
         if (key.check(FcitxKey_Return)) {
-            ic->commitString(buffer_.text());
-            buffer_.learn();
-            reset();
+            commit();
             return keyEvent.filterAndAccept();
         }
         if (key.check(FcitxKey_Left)) {
@@ -290,7 +294,15 @@ void ZhuyinEngine::activate(const InputMethodEntry &,
 
 void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
                               InputContextEvent &event) {
+    auto *inputContext = event.inputContext();
+    if (event.type() == EventType::InputContextSwitchInputMethod) {
+        if (*config_.commitOnSwitch) {
+            auto state = event.inputContext()->propertyFor(&factory_);
+            state->commit();
+        }
+    }
     reset(entry, event);
+    inputContext->statusArea().clearGroup(StatusGroup::InputMethod);
 }
 
 void ZhuyinEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
