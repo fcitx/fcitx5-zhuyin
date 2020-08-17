@@ -387,14 +387,88 @@ void ZhuyinEngine::reloadConfig() {
         zhuyin_set_full_pinyin_scheme(context_.get(), pyScheme);
     }
 
-    constexpr KeySym syms[] = {
-        FcitxKey_1, FcitxKey_2, FcitxKey_3, FcitxKey_4, FcitxKey_5,
-        FcitxKey_6, FcitxKey_7, FcitxKey_8, FcitxKey_9, FcitxKey_0,
+    constexpr KeySym syms[][10] = {
+        {
+            FcitxKey_1,
+            FcitxKey_2,
+            FcitxKey_3,
+            FcitxKey_4,
+            FcitxKey_5,
+            FcitxKey_6,
+            FcitxKey_7,
+            FcitxKey_8,
+            FcitxKey_9,
+            FcitxKey_0,
+        },
+
+        {
+            FcitxKey_a,
+            FcitxKey_s,
+            FcitxKey_d,
+            FcitxKey_f,
+            FcitxKey_g,
+            FcitxKey_h,
+            FcitxKey_j,
+            FcitxKey_k,
+            FcitxKey_l,
+            FcitxKey_semicolon,
+        },
+
+        {
+            FcitxKey_a,
+            FcitxKey_s,
+            FcitxKey_d,
+            FcitxKey_f,
+            FcitxKey_z,
+            FcitxKey_x,
+            FcitxKey_c,
+            FcitxKey_v,
+            FcitxKey_8,
+            FcitxKey_9,
+        },
+
+        {
+            FcitxKey_a,
+            FcitxKey_s,
+            FcitxKey_d,
+            FcitxKey_f,
+            FcitxKey_j,
+            FcitxKey_k,
+            FcitxKey_l,
+            FcitxKey_7,
+            FcitxKey_8,
+            FcitxKey_9,
+        },
+
+        {
+            FcitxKey_1,
+            FcitxKey_2,
+            FcitxKey_3,
+            FcitxKey_4,
+            FcitxKey_q,
+            FcitxKey_w,
+            FcitxKey_e,
+            FcitxKey_r,
+            FcitxKey_a,
+            FcitxKey_s,
+        },
+        {
+            FcitxKey_d,
+            FcitxKey_s,
+            FcitxKey_t,
+            FcitxKey_n,
+            FcitxKey_a,
+            FcitxKey_e,
+            FcitxKey_o,
+            FcitxKey_7,
+            FcitxKey_8,
+            FcitxKey_9,
+        },
     };
 
     KeyStates states = KeyState::NoState;
 
-    for (auto sym : syms) {
+    for (auto sym : syms[static_cast<int>(*config_.selectionKey)]) {
         selectionKeys_.emplace_back(sym, states);
     }
 

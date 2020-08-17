@@ -37,6 +37,19 @@ enum class Scheme {
     SecondaryZhuyin
 };
 
+enum class SelectionKey {
+    Digit,
+    asdfghjkl,
+    asdfzxcv89,
+    asdfjkl789,
+    aoeuhtn789,
+    _1234qweras,
+    dstnaeo789
+};
+
+FCITX_CONFIG_ENUM_NAME(SelectionKey, "1234567890", "asdfghjkl;", "asdfzxcv89",
+                       "asdfjkl789", "aoeuhtn789", "1234qweras", "dstnaeo789");
+
 FCITX_CONFIG_ENUM_NAME_WITH_I18N(Scheme, N_("Standard"), N_("Hsu"), N_("IBM"),
                                  N_("GinYieh"), N_("Eten"), N_("Eten26"),
                                  N_("Standard Dvorak"), N_("Hsu Dvorak"),
@@ -59,6 +72,8 @@ FCITX_CONFIGURATION(
     ZhuyinConfig,
     OptionWithAnnotation<Scheme, SchemeI18NAnnotation> layout{
         this, "Layout", _("Layout"), Scheme::Standard};
+    Option<SelectionKey> selectionKey{this, "SelectionKey", _("Selection Key"),
+                                      SelectionKey::Digit};
     Option<bool> needTone{this, "NeedTone", _("Require tone in zhuyin"), true};
     Option<bool> commitOnSwitch{
         this, "CommitOnSwitch",
