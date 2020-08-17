@@ -347,7 +347,7 @@ void ZhuyinBuffer::type(uint32_t c) {
         ((provider_->isZhuyin() &&
           zhuyin_in_chewing_keyboard(instance_.get(), c, &symbols)) ||
          (!provider_->isZhuyin() &&
-          (charutils::islower(c) /* || c == '\'' */)))) {
+          (charutils::islower(c) || (c >= '1' && c <= '5'))))) {
         g_strfreev(symbols);
         if (cursor_->sectionType() == ZhuyinSectionType::Zhuyin) {
             cursor_->type(c);
