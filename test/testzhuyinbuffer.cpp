@@ -6,6 +6,7 @@
  */
 #include "testdir.h"
 #include "zhuyinbuffer.h"
+#include "zhuyincandidate.h"
 #include <fcitx-utils/log.h>
 
 using namespace fcitx;

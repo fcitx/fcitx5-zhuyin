@@ -5,6 +5,7 @@
  *
  */
 #include "zhuyinengine.h"
+#include "zhuyincandidate.h"
 #include <fcitx-config/iniparser.h>
 #include <fcitx-utils/charutils.h>
 #include <fcitx-utils/log.h>
@@ -39,7 +40,7 @@ void ZhuyinState::commit() {
 }
 
 void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
-    auto ic = keyEvent.inputContext();
+    auto *ic = keyEvent.inputContext();
     auto key = keyEvent.key();
     if (keyEvent.isRelease()) {
         return;
@@ -297,7 +298,7 @@ void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
     auto *inputContext = event.inputContext();
     if (event.type() == EventType::InputContextSwitchInputMethod) {
         if (*config_.commitOnSwitch) {
-            auto state = event.inputContext()->propertyFor(&factory_);
+            auto *state = event.inputContext()->propertyFor(&factory_);
             state->commit();
         }
     }
@@ -306,12 +307,12 @@ void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
 }
 
 void ZhuyinEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
-    auto state = keyEvent.inputContext()->propertyFor(&factory_);
+    auto *state = keyEvent.inputContext()->propertyFor(&factory_);
     state->keyEvent(keyEvent);
 }
 
 void ZhuyinEngine::reset(const InputMethodEntry &, InputContextEvent &event) {
-    auto state = event.inputContext()->propertyFor(&factory_);
+    auto *state = event.inputContext()->propertyFor(&factory_);
     state->reset();
 }
 
@@ -510,14 +511,10 @@ void ZhuyinEngine::reloadConfig() {
     zhuyin_set_options(context_.get(), options);
 
     instance_->inputContextManager().foreach([this](InputContext *ic) {
-        auto state = ic->propertyFor(&factory_);
+        auto *state = ic->propertyFor(&factory_);
         state->reset();
         return true;
     });
-
-    if (*config_.fuzzy->fuzzyCCh) {
-        options |= PINYIN_AMB_C_CH;
-    }
 
     zhuyin_load_phrase_library(context_.get(), USER_DICTIONARY);
 }

@@ -44,7 +44,7 @@ void ZhuyinSymbol::load(std::FILE *file) {
             continue;
         }
 
-        auto space = trimmed.find(" ");
+        auto space = trimmed.find(' ');
         auto key = trimmed.substr(0, space);
         auto value = trimmed.substr(space + 1);
         if (key.empty() || value.empty()) {
