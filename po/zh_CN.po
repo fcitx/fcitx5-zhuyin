@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 00:01-0700\n"
+"POT-Creation-Date: 2020-08-20 00:02-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/fcitx/teams/12005/"
@@ -26,7 +26,7 @@ msgstr "注音"
 
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
-msgstr ""
+msgstr "切换到其他输入法时提交当前预编辑区"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
@@ -118,7 +118,7 @@ msgstr "注音二式"
 
 #: src/zhuyinengine.h:75
 msgid "Selection Key"
-msgstr ""
+msgstr "选词键"
 
 #: src/zhuyinengine.h:53
 msgid "Standard"
