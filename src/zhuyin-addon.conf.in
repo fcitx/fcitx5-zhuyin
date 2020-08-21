@@ -8,7 +8,6 @@ OnDemand=True
 Configurable=True
 
 [Addon/OptionalDependencies]
-0=punctuation
-1=fullwidth
-2=chttrans
-3=quickphrase
+0=fullwidth
+1=chttrans
+2=quickphrase

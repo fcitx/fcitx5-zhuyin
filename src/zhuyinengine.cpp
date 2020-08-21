@@ -284,7 +284,7 @@ void ZhuyinEngine::activate(const InputMethodEntry &,
     // Request full width.
     fullwidth();
     chttrans();
-    for (const auto *actionName : {"chttrans", "punctuation", "fullwidth"}) {
+    for (const auto *actionName : {"chttrans", "fullwidth"}) {
         if (auto *action =
                 instance_->userInterfaceManager().lookupAction(actionName)) {
             inputContext->statusArea().addAction(StatusGroup::InputMethod,
