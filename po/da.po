@@ -4,14 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
+# scootergrisen, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 00:01-0700\n"
+"POT-Creation-Date: 2020-08-21 00:02-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: scootergrisen, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/fcitx/teams/12005/da/)\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +66,7 @@ msgstr "IBM"
 
 #: src/zhuyinengine.h:74
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: src/zhuyinengine.h:56
 msgid "Luoma"
@@ -73,31 +74,31 @@ msgstr ""
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
-msgstr ""
+msgstr "Næste kandidat"
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
-msgstr ""
+msgstr "Næste side"
 
 #: src/zhuyinengine.h:81
 msgid "Page size"
-msgstr ""
+msgstr "Sidestørrelse"
 
 #: src/zhuyinengine.cpp:189
 msgid "Press {} for {}"
-msgstr ""
+msgstr "Tryk på {} for {}"
 
 #: src/zhuyinengine.cpp:182
 msgid "Press {} for {} and Return for {}"
-msgstr ""
+msgstr "Tryk på {} for {} og Retur for {}"
 
 #: src/zhuyinengine.h:104
 msgid "Prev Candidate"
-msgstr ""
+msgstr "Forrige kandidat"
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
-msgstr ""
+msgstr "Forrige side"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
@@ -113,11 +114,11 @@ msgstr ""
 
 #: src/zhuyinengine.h:57
 msgid "Secondary Zhuyin"
-msgstr ""
+msgstr "Sekundær Zhuyin"
 
 #: src/zhuyinengine.h:75
 msgid "Selection Key"
-msgstr ""
+msgstr "Tast til at vælge"
 
 #: src/zhuyinengine.h:53
 msgid "Standard"
@@ -137,4 +138,4 @@ msgstr "Zhuyin"
 
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
-msgstr ""
+msgstr "Zhuyin-inputmetode"
