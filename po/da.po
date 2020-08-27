@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-21 00:02-0700\n"
+"POT-Creation-Date: 2020-08-27 00:02-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: scootergrisen, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/fcitx/teams/12005/da/)\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
-msgstr ""
+msgstr "Dachen CP26"
 
 #: src/zhuyinengine.h:54
 msgid "Eten"
@@ -42,7 +42,7 @@ msgstr "Eten26"
 
 #: src/zhuyinengine.h:113
 msgid "Fuzzy"
-msgstr ""
+msgstr "Uafklarede"
 
 #: src/zhuyinengine.h:54
 msgid "GinYieh"
@@ -50,7 +50,7 @@ msgstr "GinYieh"
 
 #: src/zhuyinengine.h:56
 msgid "Hanyu"
-msgstr ""
+msgstr "Hanyu"
 
 #: src/zhuyinengine.h:53
 msgid "Hsu"
@@ -70,7 +70,7 @@ msgstr "Layout"
 
 #: src/zhuyinengine.h:56
 msgid "Luoma"
-msgstr ""
+msgstr "Luoma"
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
@@ -102,15 +102,15 @@ msgstr "Forrige side"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "Udløsertast til hurtigfrase"
 
 #: src/zhuyinengine.h:88
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "Symbol for udløsertast til hurtigfrase"
 
 #: src/zhuyinengine.h:77
 msgid "Require tone in zhuyin"
-msgstr ""
+msgstr "Kræv tone i zhuyin"
 
 #: src/zhuyinengine.h:57
 msgid "Secondary Zhuyin"
