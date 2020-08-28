@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-27 00:02-0700\n"
+"POT-Creation-Date: 2020-08-28 00:01-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: scootergrisen, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/fcitx/teams/12005/da/)\n"
@@ -26,7 +26,7 @@ msgstr "Bopomofo"
 
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
-msgstr ""
+msgstr "Udfør nuværende preedit når der skiftes til en anden inputmetode"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
@@ -130,7 +130,7 @@ msgstr "Standard Dvorak"
 
 #: src/zhuyinengine.h:83
 msgid "Use easy symbol"
-msgstr ""
+msgstr "Brug easy-symbol"
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
