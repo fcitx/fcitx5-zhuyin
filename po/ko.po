@@ -4,14 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
+# JungHee Lee <daemul72@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 00:01-0700\n"
+"POT-Creation-Date: 2020-09-15 00:03-0700\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: JungHee Lee <daemul72@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +50,7 @@ msgstr "GinYieh"
 
 #: src/zhuyinengine.h:56
 msgid "Hanyu"
-msgstr ""
+msgstr "Hanyu (한족의 기본 중국어)"
 
 #: src/zhuyinengine.h:53
 msgid "Hsu"
@@ -65,7 +66,7 @@ msgstr "IBM"
 
 #: src/zhuyinengine.h:74
 msgid "Layout"
-msgstr ""
+msgstr "자판"
 
 #: src/zhuyinengine.h:56
 msgid "Luoma"
@@ -77,11 +78,11 @@ msgstr ""
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
-msgstr ""
+msgstr "다음 페이지"
 
 #: src/zhuyinengine.h:81
 msgid "Page size"
-msgstr ""
+msgstr "페이지 크기"
 
 #: src/zhuyinengine.cpp:189
 msgid "Press {} for {}"
@@ -97,7 +98,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
-msgstr ""
+msgstr "이전 페이지"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
@@ -109,11 +110,11 @@ msgstr ""
 
 #: src/zhuyinengine.h:77
 msgid "Require tone in zhuyin"
-msgstr ""
+msgstr "주음부호의 성조 필요"
 
 #: src/zhuyinengine.h:57
 msgid "Secondary Zhuyin"
-msgstr ""
+msgstr "보조 주음부호"
 
 #: src/zhuyinengine.h:75
 msgid "Selection Key"
@@ -133,8 +134,8 @@ msgstr ""
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
-msgstr "주음"
+msgstr "주음부호"
 
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
-msgstr ""
+msgstr "주음부호 입력기"
