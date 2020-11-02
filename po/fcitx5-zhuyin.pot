@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 00:01-0700\n"
+"POT-Creation-Date: 2020-11-02 15:56-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,6 +131,14 @@ msgstr ""
 msgid "Zhuyin"
 msgstr ""
 
+#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:7
+msgid "Zhuyin For Fcitx 5"
+msgstr ""
+
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
+msgstr ""
+
+#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:8
+msgid "Zhuyin input method based on libpinyin"
 msgstr ""

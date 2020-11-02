@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 00:01-0700\n"
+"POT-Creation-Date: 2020-11-02 15:56-0800\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/fcitx/teams/12005/ru/)\n"
@@ -137,6 +137,14 @@ msgstr ""
 msgid "Zhuyin"
 msgstr "Чжуинь"
 
+#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:7
+msgid "Zhuyin For Fcitx 5"
+msgstr ""
+
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
+msgstr ""
+
+#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:8
+msgid "Zhuyin input method based on libpinyin"
 msgstr ""
