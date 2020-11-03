@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-02 15:56-0800\n"
+"POT-Creation-Date: 2020-11-03 00:03-0800\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: scootergrisen, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/fcitx/teams/12005/da/)\n"
@@ -138,7 +138,7 @@ msgstr "Zhuyin"
 
 #: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
-msgstr ""
+msgstr "Zhuyin til Fcitx 5"
 
 #: src/zhuyin-addon.conf.in:4
 msgid "Zhuyin Input Method"
@@ -146,4 +146,4 @@ msgstr "Zhuyin-inputmetode"
 
 #: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:8
 msgid "Zhuyin input method based on libpinyin"
-msgstr ""
+msgstr "Zhuyin inputmetode baseret på libpinyin"
