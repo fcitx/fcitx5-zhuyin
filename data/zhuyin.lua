@@ -61,7 +61,7 @@ local SYMBOLS = {
          "╱", "╲", "／", "＼"},
 }
 
-function get_symbol(input)
+function get_zhuyin_symbol(input)
     if fcitx.currentInputMethod() ~= "zhuyin" then
         return nil
     end
@@ -89,4 +89,4 @@ function get_symbol(input)
 end
 
 ------------
-ime.register_command("sy", "get_symbol", "输入符号", "digit", "")
+ime.register_command("sy", "get_zhuyin_symbol", "输入符号", "digit", "")
