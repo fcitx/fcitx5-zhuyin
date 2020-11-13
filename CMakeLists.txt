@@ -15,6 +15,8 @@ find_package(Fcitx5Module REQUIRED COMPONENTS Notifications QuickPhrase)
 find_package(PkgConfig REQUIRED)
 find_package(fmt REQUIRED)
 
+set(LIBZHUYIN_DATABASE_FORMAT "KyotoCabinet" CACHE STRING "When can't detect dbformat fallback to this option")
+
 if (TARGET fmt::fmt-header-only)
   set(FMT_TARGET fmt::fmt-header-only)
 else()
@@ -23,6 +25,13 @@ endif ()
 pkg_check_modules(LibZhuyin REQUIRED IMPORTED_TARGET "libzhuyin>=2.3.0")
 
 add_definitions(-DFCITX_GETTEXT_DOMAIN=\"fcitx5-zhuyin\")
+if (EXISTS ${LibZhuyin_LIBDIR}/libpinyin/data/table.conf)
+    file(STRINGS ${LibZhuyin_LIBDIR}/libpinyin/data/table.conf LIBPINYIN_DATABASE_FORMAT REGEX "database format")
+    set(DATABASE_FORMAT "${LIBPINYIN_DATABASE_FORMAT}")
+else()
+    message(WARNING "Could not detect database format for libpinyin, fallback to ${LIBZHUYIN_DATABASE_FORMAT}")
+    set(DATABASE_FORMAT "database format:${LIBZHUYIN_DATABASE_FORMAT}")
+endif()
 
 include("${FCITX_INSTALL_CMAKECONFIG_DIR}/Fcitx5Utils/Fcitx5CompilerSettings.cmake")
 

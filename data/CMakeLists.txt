@@ -16,10 +16,10 @@ foreach(f ${_LIBPINYIN_TABLE})
     set(_LIBPINYIN_GEN_BIN_FILES ${_LIBPINYIN_GEN_BIN_FILES} "${CMAKE_CURRENT_BINARY_DIR}/${f}.bin")
 endforeach()
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/table.conf ${CMAKE_CURRENT_BINARY_DIR}/table.conf COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/table.conf.in ${CMAKE_CURRENT_BINARY_DIR}/table.conf @ONLY)
 
 set(ZHUYIN_DATA_FILE_NAME model.text.20161206.tar.gz)
-set(ZHUYIN_URL "http://download.fcitx-im.org/data/${ZHUYIN_DATA_FILE_NAME}")
+set(ZHUYIN_URL "https://download.fcitx-im.org/data/${ZHUYIN_DATA_FILE_NAME}")
 set(ZHUYIN_ORGDATA ${_LIBPINYIN_TABLE_FILES} interpolation2.text)
 set(ZHUYIN_DATA bigram.db ${_LIBPINYIN_BIN_FILES}  phrase_index.bin
                 pinyin_index.bin addon_phrase_index.bin addon_pinyin_index.bin)
@@ -45,7 +45,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/bigram.db
               ${CMAKE_CURRENT_BINARY_DIR}/pinyin_index.bin
               ${CMAKE_CURRENT_BINARY_DIR}/addon_phrase_index.bin
               ${CMAKE_CURRENT_BINARY_DIR}/addon_pinyin_index.bin
-              table.conf
+              ${CMAKE_CURRENT_BINARY_DIR}/table.conf
               easysymbols.txt
         DESTINATION "${FCITX_INSTALL_PKGDATADIR}/zhuyin")
 
