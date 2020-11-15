@@ -1,6 +1,6 @@
 [InputMethod]
 Name=Bopomofo
-Icon=fcitx-bopomofo
+Icon=fcitx-zhuyin
 Label=ㄓ
 LangCode=zh_TW
 Addon=zhuyin
