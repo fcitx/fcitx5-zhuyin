@@ -171,6 +171,7 @@ private:
 class ZhuyinEngineFactory final : public AddonFactory {
 public:
     fcitx::AddonInstance *create(fcitx::AddonManager *manager) override {
+        registerDomain("fcitx5-zhuiyin", FCITX_INSTALL_LOCALEDIR);
         return new ZhuyinEngine(manager->instance());
     }
 };
