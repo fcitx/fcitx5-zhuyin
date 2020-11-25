@@ -303,7 +303,6 @@ void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
         }
     }
     reset(entry, event);
-    inputContext->statusArea().clearGroup(StatusGroup::InputMethod);
 }
 
 void ZhuyinEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
