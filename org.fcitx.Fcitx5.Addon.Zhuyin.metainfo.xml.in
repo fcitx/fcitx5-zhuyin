@@ -7,6 +7,8 @@
   <name>Zhuyin For Fcitx 5</name>
   <summary>Zhuyin input method based on libpinyin</summary>
   <url type="homepage">https://fcitx-im.org</url>
+  <url type="bugtracker">https://github.com/fcitx/fcitx5-zhuyin/issues</url>
+  <project_group>Fcitx</project_group>
   <releases>
     <release version="5.0.1" date="2020-11-21"/>
     <release version="5.0.0" date="2020-10-30"/>
