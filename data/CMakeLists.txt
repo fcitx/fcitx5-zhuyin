@@ -1,7 +1,6 @@
-foreach(icon zhuyin)
-    install(FILES ${icon}.png RENAME fcitx-${icon}.png
-            DESTINATION share/icons/hicolor/48x48/status/)
-endforeach()
+install(DIRECTORY 48x48 DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor"
+        PATTERN .* EXCLUDE
+        PATTERN *~ EXCLUDE)
 
 
 find_program(LIBPINYIN_GEN_BINARY_FILES gen_binary_files HINTS "${LIBPINYIN_EXECPREFIX}/bin")
