@@ -7,6 +7,7 @@
 #include "zhuyinsection.h"
 #include "zhuyinbuffer.h"
 #include "zhuyincandidate.h"
+#include <limits>
 #include <fcitx-utils/utf8.h>
 
 namespace fcitx {
