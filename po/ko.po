@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-02 15:56-0800\n"
+"POT-Creation-Date: 2020-12-26 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: JungHee Lee <daemul72@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
@@ -42,7 +42,7 @@ msgstr "Eten26"
 
 #: src/zhuyinengine.h:113
 msgid "Fuzzy"
-msgstr ""
+msgstr "퍼지"
 
 #: src/zhuyinengine.h:54
 msgid "GinYieh"
@@ -70,11 +70,11 @@ msgstr "자판"
 
 #: src/zhuyinengine.h:56
 msgid "Luoma"
-msgstr ""
+msgstr "로마"
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
-msgstr ""
+msgstr "다음 후보"
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
@@ -94,7 +94,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:104
 msgid "Prev Candidate"
-msgstr ""
+msgstr "이전 후보"
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
@@ -102,11 +102,11 @@ msgstr "이전 페이지"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "상용구 전환 키"
 
 #: src/zhuyinengine.h:88
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "상용구 전환 키 기호"
 
 #: src/zhuyinengine.h:77
 msgid "Require tone in zhuyin"
@@ -130,13 +130,13 @@ msgstr "표준 드보락"
 
 #: src/zhuyinengine.h:83
 msgid "Use easy symbol"
-msgstr ""
+msgstr "쉬운 기호 사용"
 
 #: src/zhuyin-addon.conf.in:3
 msgid "Zhuyin"
 msgstr "주음부호"
 
-#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:7
+#: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
 msgstr ""
 
@@ -144,6 +144,6 @@ msgstr ""
 msgid "Zhuyin Input Method"
 msgstr "주음부호 입력기"
 
-#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:8
+#: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:8
 msgid "Zhuyin input method based on libpinyin"
 msgstr ""
