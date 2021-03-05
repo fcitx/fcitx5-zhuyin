@@ -2,6 +2,7 @@
 Name=Zhuyin
 Comment=Zhuyin Input Method
 Category=InputMethod
+Version=@PROJECT_VERSION@
 Library=zhuyin
 Type=SharedLibrary
 OnDemand=True
