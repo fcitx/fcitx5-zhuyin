@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-10 20:24+0000\n"
+"POT-Creation-Date: 2021-04-02 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: Bruce Lee <daemul72@gmail.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
@@ -26,11 +26,11 @@ msgstr "주음(Bopomofo)"
 
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
-msgstr ""
+msgstr "다른 입력기로 전환할 때 현재 사전편집 커밋"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
-msgstr ""
+msgstr "다천 CP26"
 
 #: src/zhuyinengine.h:54
 msgid "Eten"
@@ -86,7 +86,7 @@ msgstr "페이지 크기"
 
 #: src/zhuyinengine.cpp:189
 msgid "Press {} for {}"
-msgstr ""
+msgstr "{}을 누릅니다 ({}의 경우)"
 
 #: src/zhuyinengine.cpp:182
 msgid "Press {} for {} and Return for {}"
@@ -132,7 +132,7 @@ msgstr "표준 드보락"
 msgid "Use easy symbol"
 msgstr "쉬운 기호 사용"
 
-#: src/zhuyin-addon.conf.in:3
+#: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin"
 msgstr "주음부호"
 
@@ -140,7 +140,7 @@ msgstr "주음부호"
 msgid "Zhuyin For Fcitx 5"
 msgstr ""
 
-#: src/zhuyin-addon.conf.in:4
+#: src/zhuyin-addon.conf.in.in:4
 msgid "Zhuyin Input Method"
 msgstr "주음부호 입력기"
 
