@@ -4,15 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
-# Bruce Lee <daemul72@gmail.com>, 2021
+# Jung Hee Lee <daemul72@gmail.com>, 2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2021-04-02 20:24+0000\n"
+"POT-Creation-Date: 2021-06-05 20:25+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: Bruce Lee <daemul72@gmail.com>, 2021\n"
+"Last-Translator: Jung Hee Lee <daemul72@gmail.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,7 @@ msgstr "주음부호"
 
 #: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
-msgstr ""
+msgstr "Fcitx 5용 주음부호"
 
 #: src/zhuyin-addon.conf.in.in:4
 msgid "Zhuyin Input Method"
@@ -146,4 +146,4 @@ msgstr "주음부호 입력기"
 
 #: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:8
 msgid "Zhuyin input method based on libpinyin"
-msgstr ""
+msgstr "libpinin을 기반으로 한 Zhuyin 입력기"
