@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2022-01-14 20:24+0000\n"
+"POT-Creation-Date: 2022-01-15 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>, 2022\n"
 "Language-Team: German (https://www.transifex.com/fcitx/teams/12005/de/)\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
-msgstr ""
+msgstr "Nächster Kandidat"
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
@@ -86,7 +86,7 @@ msgstr "Seitengröße"
 
 #: src/zhuyinengine.cpp:189
 msgid "Press {} for {}"
-msgstr ""
+msgstr "{} für {} drücken"
 
 #: src/zhuyinengine.cpp:182
 msgid "Press {} for {} and Return for {}"
@@ -98,7 +98,7 @@ msgstr "Vorh. Kandidat"
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
-msgstr ""
+msgstr "Vorh. Seite"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
@@ -130,7 +130,7 @@ msgstr "Standard Dvorak"
 
 #: src/zhuyinengine.h:83
 msgid "Use easy symbol"
-msgstr ""
+msgstr "Einfaches Symbol verwenden"
 
 #: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin"
