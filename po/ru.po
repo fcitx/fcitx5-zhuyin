@@ -4,14 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
+# Dmitry <dmitrydmitry761@gmail.com>, 2022
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-02 15:56-0800\n"
+"POT-Creation-Date: 2022-01-21 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>, 2022\n"
 "Language-Team: Russian (https://www.transifex.com/fcitx/teams/12005/ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +29,12 @@ msgstr "Бопомофо"
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
 msgstr ""
+"Зафиксировать текущее предварительное редактирование при переключении на "
+"другой метод ввода"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
-msgstr ""
+msgstr "Dachen CP26"
 
 #: src/zhuyinengine.h:54
 msgid "Eten"
@@ -43,7 +46,7 @@ msgstr "Eten26"
 
 #: src/zhuyinengine.h:113
 msgid "Fuzzy"
-msgstr ""
+msgstr "Нечеткий"
 
 #: src/zhuyinengine.h:54
 msgid "GinYieh"
@@ -51,7 +54,7 @@ msgstr "GinYieh"
 
 #: src/zhuyinengine.h:56
 msgid "Hanyu"
-msgstr ""
+msgstr "Hanyu"
 
 #: src/zhuyinengine.h:53
 msgid "Hsu"
@@ -67,59 +70,59 @@ msgstr "IBM"
 
 #: src/zhuyinengine.h:74
 msgid "Layout"
-msgstr ""
+msgstr "Макет"
 
 #: src/zhuyinengine.h:56
 msgid "Luoma"
-msgstr ""
+msgstr "Luoma"
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
-msgstr ""
+msgstr "Следующий кандидат"
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
-msgstr ""
+msgstr "Следующая Страница"
 
 #: src/zhuyinengine.h:81
 msgid "Page size"
-msgstr ""
+msgstr "Размер страницы"
 
 #: src/zhuyinengine.cpp:189
 msgid "Press {} for {}"
-msgstr ""
+msgstr "Нажмите {} для {}"
 
 #: src/zhuyinengine.cpp:182
 msgid "Press {} for {} and Return for {}"
-msgstr ""
+msgstr "Нажмите {} для {} и Return для {}"
 
 #: src/zhuyinengine.h:104
 msgid "Prev Candidate"
-msgstr ""
+msgstr "Предыдущий кандидат"
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
-msgstr ""
+msgstr "Предыдущая страница"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "Клавиша-триггер QuickPhrase"
 
 #: src/zhuyinengine.h:88
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "Символ клавиши-триггера QuickPhrase"
 
 #: src/zhuyinengine.h:77
 msgid "Require tone in zhuyin"
-msgstr ""
+msgstr "Требовать указывание тона в zhuyin"
 
 #: src/zhuyinengine.h:57
 msgid "Secondary Zhuyin"
-msgstr ""
+msgstr "Двойной Zhuyin"
 
 #: src/zhuyinengine.h:75
 msgid "Selection Key"
-msgstr ""
+msgstr "Клавиша выбора"
 
 #: src/zhuyinengine.h:53
 msgid "Standard"
@@ -131,20 +134,20 @@ msgstr "Дворак стандартный"
 
 #: src/zhuyinengine.h:83
 msgid "Use easy symbol"
-msgstr ""
+msgstr "Использовать простой символ"
 
-#: src/zhuyin-addon.conf.in:3
+#: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin"
 msgstr "Чжуинь"
 
-#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:7
+#: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
-msgstr ""
+msgstr "Zhuyin для Fcitx 5"
 
-#: src/zhuyin-addon.conf.in:4
+#: src/zhuyin-addon.conf.in.in:4
 msgid "Zhuyin Input Method"
-msgstr ""
+msgstr "Метод Ввода Zhuyin"
 
-#: org.fcitx.fcitx5-zhuyin.metainfo.xml.in:8
+#: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:8
 msgid "Zhuyin input method based on libpinyin"
-msgstr ""
+msgstr "Метод ввода Zhuyin на основе libpinyin"
