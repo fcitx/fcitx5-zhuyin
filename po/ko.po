@@ -4,15 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
-# Jung Hee Lee <daemul72@gmail.com>, 2021
+# Junghee Lee <daemul72@gmail.com>, 2022
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2021-06-15 20:24+0000\n"
+"POT-Creation-Date: 2022-04-09 20:25+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: Jung Hee Lee <daemul72@gmail.com>, 2021\n"
+"Last-Translator: Junghee Lee <daemul72@gmail.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "주음(Bopomofo)"
 
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
-msgstr "다른 입력기로 전환할 때 현재 사전편집 커밋"
+msgstr "다른 입력기로 전환할 때 현재 사전편집 입력완료"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
@@ -50,7 +50,7 @@ msgstr "GinYieh"
 
 #: src/zhuyinengine.h:56
 msgid "Hanyu"
-msgstr "Hanyu (한족의 기본 중국어)"
+msgstr "한어"
 
 #: src/zhuyinengine.h:53
 msgid "Hsu"
