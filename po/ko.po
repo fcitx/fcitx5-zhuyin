@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2022-04-09 20:25+0000\n"
+"POT-Creation-Date: 2022-04-10 20:25+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: Junghee Lee <daemul72@gmail.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
@@ -102,11 +102,11 @@ msgstr "이전 페이지"
 
 #: src/zhuyinengine.h:85
 msgid "QuickPhrase Trigger Key"
-msgstr "상용구 전환 키"
+msgstr "상용구 트리거 키"
 
 #: src/zhuyinengine.h:88
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr "상용구 전환 키 기호"
+msgstr "상용구 트리거 키 기호"
 
 #: src/zhuyinengine.h:77
 msgid "Require tone in zhuyin"
@@ -138,7 +138,7 @@ msgstr "주음부호"
 
 #: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
-msgstr "Fcitx 5용 주음부호"
+msgstr "Fcitx5용 주음부호"
 
 #: src/zhuyin-addon.conf.in.in:4
 msgid "Zhuyin Input Method"
