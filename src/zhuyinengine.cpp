@@ -331,8 +331,11 @@ void ZhuyinEngine::reloadConfig() {
     if (*config_.useEasySymbol) {
         fd = StandardPath::global().open(StandardPath::Type::PkgData,
                                          "zhuyin/easysymbols.txt", O_RDONLY);
-        if (fd.fd() >= 0) {
+        if (fd.isValid()) {
             file.reset(fdopen(fd.fd(), "r"));
+            if (file) {
+                fd.release();
+            }
         }
     }
     symbol_.load(file.get());
