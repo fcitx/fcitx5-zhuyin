@@ -23,28 +23,28 @@
 namespace fcitx {
 
 enum class Scheme {
-    Standard,
-    Hsu,
-    IBM,
-    GinYieh,
-    Eten,
-    Eten26,
-    Dvorak,
-    HsuDvorak,
-    DachenCP26,
-    Hanyu,
-    Luoma,
-    SecondaryZhuyin
+  Standard,
+  Hsu,
+  IBM,
+  GinYieh,
+  Eten,
+  Eten26,
+  Dvorak,
+  HsuDvorak,
+  DachenCP26,
+  Hanyu,
+  Luoma,
+  SecondaryZhuyin
 };
 
 enum class SelectionKey {
-    Digit,
-    asdfghjkl,
-    asdfzxcv89,
-    asdfjkl789,
-    aoeuhtn789,
-    _1234qweras,
-    dstnaeo789
+  Digit,
+  asdfghjkl,
+  asdfzxcv89,
+  asdfjkl789,
+  aoeuhtn789,
+  _1234qweras,
+  dstnaeo789
 };
 
 FCITX_CONFIG_ENUM_NAME(SelectionKey, "1234567890", "asdfghjkl;", "asdfzxcv89",
@@ -116,64 +116,64 @@ class ZhuyinEngine;
 
 class ZhuyinState final : public InputContextProperty {
 public:
-    ZhuyinState(ZhuyinEngine *engine, InputContext *ic);
+  ZhuyinState(ZhuyinEngine *engine, InputContext *ic);
 
-    void keyEvent(KeyEvent &keyEvent);
-    void reset();
-    void commit();
+  void keyEvent(KeyEvent &keyEvent);
+  void reset();
+  void commit();
 
-    void updateUI(bool showCandidate = false);
+  void updateUI(bool showCandidate = false);
 
 private:
-    ZhuyinEngine *engine_;
-    ZhuyinBuffer buffer_;
-    InputContext *ic_;
+  ZhuyinEngine *engine_;
+  ZhuyinBuffer buffer_;
+  InputContext *ic_;
 };
 
 class ZhuyinEngine : public InputMethodEngine, public ZhuyinProviderInterface {
 public:
-    explicit ZhuyinEngine(Instance *instance);
+  explicit ZhuyinEngine(Instance *instance);
 
-    void keyEvent(const fcitx::InputMethodEntry &entry,
-                  fcitx::KeyEvent &keyEvent) override;
-    void activate(const fcitx::InputMethodEntry &,
-                  fcitx::InputContextEvent &) override;
-    void deactivate(const fcitx::InputMethodEntry &entry,
-                    fcitx::InputContextEvent &event) override;
-    void reset(const fcitx::InputMethodEntry &,
-               fcitx::InputContextEvent &) override;
-    const fcitx::Configuration *getConfig() const override;
-    void setConfig(const fcitx::RawConfig &) override;
-    void save() override;
-    void reloadConfig() override;
+  void keyEvent(const fcitx::InputMethodEntry &entry,
+                fcitx::KeyEvent &keyEvent) override;
+  void activate(const fcitx::InputMethodEntry &,
+                fcitx::InputContextEvent &) override;
+  void deactivate(const fcitx::InputMethodEntry &entry,
+                  fcitx::InputContextEvent &event) override;
+  void reset(const fcitx::InputMethodEntry &,
+             fcitx::InputContextEvent &) override;
+  const fcitx::Configuration *getConfig() const override;
+  void setConfig(const fcitx::RawConfig &) override;
+  void save() override;
+  void reloadConfig() override;
 
-    zhuyin_context_t *context() override { return context_.get(); }
-    bool isZhuyin() const override { return isZhuyin_; }
-    const auto &config() const { return config_; }
-    const ZhuyinSymbol &symbol() const override { return symbol_; }
+  zhuyin_context_t *context() override { return context_.get(); }
+  bool isZhuyin() const override { return isZhuyin_; }
+  const auto &config() const { return config_; }
+  const ZhuyinSymbol &symbol() const override { return symbol_; }
 
-    const KeyList &selectionKeys() const { return selectionKeys_; }
+  const KeyList &selectionKeys() const { return selectionKeys_; }
 
-    FCITX_ADDON_DEPENDENCY_LOADER(fullwidth, instance_->addonManager());
-    FCITX_ADDON_DEPENDENCY_LOADER(chttrans, instance_->addonManager());
-    FCITX_ADDON_DEPENDENCY_LOADER(quickphrase, instance_->addonManager());
+  FCITX_ADDON_DEPENDENCY_LOADER(fullwidth, instance_->addonManager());
+  FCITX_ADDON_DEPENDENCY_LOADER(chttrans, instance_->addonManager());
+  FCITX_ADDON_DEPENDENCY_LOADER(quickphrase, instance_->addonManager());
 
 private:
-    Instance *instance_;
-    UniqueCPtr<zhuyin_context_t, zhuyin_fini> context_;
-    FactoryFor<ZhuyinState> factory_;
-    ZhuyinSymbol symbol_;
-    ZhuyinConfig config_;
-    KeyList selectionKeys_;
-    bool isZhuyin_ = true;
+  Instance *instance_;
+  UniqueCPtr<zhuyin_context_t, zhuyin_fini> context_;
+  FactoryFor<ZhuyinState> factory_;
+  ZhuyinSymbol symbol_;
+  ZhuyinConfig config_;
+  KeyList selectionKeys_;
+  bool isZhuyin_ = true;
 };
 
 class ZhuyinEngineFactory final : public AddonFactory {
 public:
-    fcitx::AddonInstance *create(fcitx::AddonManager *manager) override {
-        registerDomain("fcitx5-zhuiyin", FCITX_INSTALL_LOCALEDIR);
-        return new ZhuyinEngine(manager->instance());
-    }
+  fcitx::AddonInstance *create(fcitx::AddonManager *manager) override {
+    registerDomain("fcitx5-zhuiyin", FCITX_INSTALL_LOCALEDIR);
+    return new ZhuyinEngine(manager->instance());
+  }
 };
 
 } // namespace fcitx
