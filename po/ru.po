@@ -4,15 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
-# Dmitry <dmitrydmitry761@gmail.com>, 2023
+# Dmitry <dmitrydmitry761@gmail.com>, 2024
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2023-05-06 20:24+0000\n"
+"POT-Creation-Date: 2024-05-31 20:25+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>, 2023\n"
+"Last-Translator: Dmitry <dmitrydmitry761@gmail.com>, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/fcitx/teams/12005/ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -78,7 +78,7 @@ msgstr "Luoma"
 
 #: src/zhuyinengine.h:110
 msgid "Next Candidate"
-msgstr "Следующий кандидат"
+msgstr "Следующее слово-кандидат"
 
 #: src/zhuyinengine.h:98
 msgid "Next Page"
@@ -88,17 +88,19 @@ msgstr "Следующая Страница"
 msgid "Page size"
 msgstr "Размер страницы"
 
-#: src/zhuyinengine.cpp:189
+#: src/zhuyinengine.cpp:186
+#, c++-format
 msgid "Press {} for {}"
 msgstr "Нажмите {} для {}"
 
-#: src/zhuyinengine.cpp:182
+#: src/zhuyinengine.cpp:181
+#, c++-format
 msgid "Press {} for {} and Return for {}"
 msgstr "Нажать {} для {} и вернуться для {}"
 
 #: src/zhuyinengine.h:104
 msgid "Prev Candidate"
-msgstr "Предыдущий кандидат"
+msgstr "Предыдущее слово-кандидат"
 
 #: src/zhuyinengine.h:92
 msgid "Prev Page"
