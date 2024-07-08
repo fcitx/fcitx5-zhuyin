@@ -6,15 +6,16 @@
 # csslayer <wengxt@gmail.com>, 2020
 # 黃柏諺 <s8321414@gmail.com>, 2020
 # bruh, 2020
+# Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-29 00:03+0100\n"
+"POT-Creation-Date: 2024-07-08 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: bruh, 2020\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/fcitx/teams/12005/"
+"Last-Translator: Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/fcitx/teams/12005/"
 "zh_TW/)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +29,7 @@ msgstr "ㄅㄆㄇㄈ"
 
 #: src/zhuyinengine.h:80
 msgid "Commit current preedit when switching to other input method"
-msgstr "切換其他輸入法時提交當前預編輯字串"
+msgstr "切換至其他輸入法時提交目前的預編輯字串"
 
 #: src/zhuyinengine.h:56
 msgid "Dachen CP26"
@@ -86,11 +87,13 @@ msgstr "下一頁"
 msgid "Page size"
 msgstr "頁面大小"
 
-#: src/zhuyinengine.cpp:189
+#: src/zhuyinengine.cpp:186
+#, c++-format
 msgid "Press {} for {}"
 msgstr "按 {} 進入 {}"
 
-#: src/zhuyinengine.cpp:182
+#: src/zhuyinengine.cpp:181
+#, c++-format
 msgid "Press {} for {} and Return for {}"
 msgstr "按 {} 進入 {} 與 Return 進入 {}"
 
@@ -134,7 +137,7 @@ msgstr "標準 Dvorak"
 msgid "Use easy symbol"
 msgstr "使用簡易符號"
 
-#: src/zhuyin-addon.conf.in:3
+#: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin"
 msgstr "注音"
 
@@ -142,7 +145,7 @@ msgstr "注音"
 msgid "Zhuyin For Fcitx 5"
 msgstr "Fcitx 5 的注音支援"
 
-#: src/zhuyin-addon.conf.in:4
+#: src/zhuyin-addon.conf.in.in:4
 msgid "Zhuyin Input Method"
 msgstr "注音輸入法"
 
