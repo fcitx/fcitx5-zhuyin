@@ -295,7 +295,6 @@ void ZhuyinEngine::activate(const InputMethodEntry &,
 
 void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
                               InputContextEvent &event) {
-    auto *inputContext = event.inputContext();
     if (event.type() == EventType::InputContextSwitchInputMethod) {
         if (*config_.commitOnSwitch) {
             auto *state = event.inputContext()->propertyFor(&factory_);
