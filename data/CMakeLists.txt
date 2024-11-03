@@ -17,13 +17,13 @@ endforeach()
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/table.conf.in ${CMAKE_CURRENT_BINARY_DIR}/table.conf @ONLY)
 
-set(ZHUYIN_DATA_FILE_NAME model.text.20161206.tar.gz)
+set(ZHUYIN_DATA_FILE_NAME model.text.20241103.tar.zst)
 set(ZHUYIN_URL "https://download.fcitx-im.org/data/${ZHUYIN_DATA_FILE_NAME}")
 set(ZHUYIN_ORGDATA ${_LIBPINYIN_TABLE_FILES} interpolation2.text)
 set(ZHUYIN_DATA bigram.db ${_LIBPINYIN_BIN_FILES}  phrase_index.bin
                 pinyin_index.bin addon_phrase_index.bin addon_pinyin_index.bin)
 
-fcitx5_download(zhuyin_data_tar "${ZHUYIN_URL}" "${ZHUYIN_DATA_FILE_NAME}" 5c7024e5735389c471f54b867eda0d98c5a40a5e5e75333a9febac107508f704)
+fcitx5_download(zhuyin_data_tar "${ZHUYIN_URL}" "${ZHUYIN_DATA_FILE_NAME}" bb4a9789b6e0fde1c6547f659ce591de5e691ee3a8345d3c1c74eaf92b31ea48)
 fcitx5_extract(zhuyin-data-extract "${ZHUYIN_DATA_FILE_NAME}"
   DEPENDS zhuyin_data_tar OUTPUT ${ZHUYIN_ORGDATA})
 
