@@ -9,15 +9,25 @@
 
 #include "zhuyinbuffer.h"
 #include "zhuyinsymbol.h"
+#include <fcitx-config/configuration.h>
+#include <fcitx-config/enum.h>
+#include <fcitx-config/option.h>
+#include <fcitx-config/rawconfig.h>
 #include <fcitx-utils/i18n.h>
 #include <fcitx-utils/inputbuffer.h>
+#include <fcitx-utils/key.h>
+#include <fcitx-utils/keysymgen.h>
+#include <fcitx-utils/misc.h>
 #include <fcitx/addonfactory.h>
+#include <fcitx/addoninstance.h>
 #include <fcitx/addonmanager.h>
+#include <fcitx/event.h>
 #include <fcitx/inputcontextproperty.h>
 #include <fcitx/inputmethodengine.h>
 #include <fcitx/instance.h>
 #include <fcitx/text.h>
 #include <quickphrase_public.h>
+#include <string>
 #include <zhuyin.h>
 
 namespace fcitx {
@@ -136,14 +146,14 @@ public:
 
     void keyEvent(const fcitx::InputMethodEntry &entry,
                   fcitx::KeyEvent &keyEvent) override;
-    void activate(const fcitx::InputMethodEntry &,
-                  fcitx::InputContextEvent &) override;
+    void activate(const fcitx::InputMethodEntry & /*entry*/,
+                  fcitx::InputContextEvent & /*event*/) override;
     void deactivate(const fcitx::InputMethodEntry &entry,
                     fcitx::InputContextEvent &event) override;
-    void reset(const fcitx::InputMethodEntry &,
-               fcitx::InputContextEvent &) override;
+    void reset(const fcitx::InputMethodEntry & /*entry*/,
+               fcitx::InputContextEvent & /*event*/) override;
     const fcitx::Configuration *getConfig() const override;
-    void setConfig(const fcitx::RawConfig &) override;
+    void setConfig(const fcitx::RawConfig & /*unused*/) override;
     void save() override;
     void reloadConfig() override;
 

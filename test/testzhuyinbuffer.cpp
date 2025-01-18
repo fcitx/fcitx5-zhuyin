@@ -7,7 +7,11 @@
 #include "testdir.h"
 #include "zhuyinbuffer.h"
 #include "zhuyincandidate.h"
+#include "zhuyinsymbol.h"
 #include <fcitx-utils/log.h>
+#include <fcitx-utils/misc.h>
+#include <memory>
+#include <zhuyin.h>
 
 using namespace fcitx;
 

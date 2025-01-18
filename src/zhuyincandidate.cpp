@@ -6,6 +6,15 @@
  */
 #include "zhuyincandidate.h"
 #include "zhuyinbuffer.h"
+#include "zhuyinsection.h"
+#include <cstddef>
+#include <fcitx/candidatelist.h>
+#include <fcitx/text.h>
+#include <glib.h>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <zhuyin.h>
 
 namespace fcitx {
 
@@ -13,20 +22,20 @@ ZhuyinSectionCandidate::ZhuyinSectionCandidate(SectionIterator section,
                                                unsigned int i)
 
     : section_(section), index_(i) {
-    lookup_candidate_t *candidate = NULL;
+    lookup_candidate_t *candidate = nullptr;
     if (!zhuyin_get_candidate(section->instance(), i, &candidate)) {
         throw std::runtime_error("Failed to get candidate");
     }
 
-    const gchar *word = NULL;
+    const gchar *word = nullptr;
     if (!zhuyin_get_candidate_string(section->instance(), candidate, &word)) {
         throw std::runtime_error("Failed to get string");
     }
     setText(Text(word));
 }
 
-void ZhuyinSectionCandidate::select(InputContext *) const {
-    lookup_candidate_t *candidate = NULL;
+void ZhuyinSectionCandidate::select(InputContext * /*inputContext*/) const {
+    lookup_candidate_t *candidate = nullptr;
     if (!zhuyin_get_candidate(section_->instance(), index_, &candidate)) {
         return;
     }
@@ -45,7 +54,7 @@ SymbolSectionCandidate::SymbolSectionCandidate(SectionIterator section,
     setText(Text(symbol_));
 }
 
-void SymbolSectionCandidate::select(InputContext *) const {
+void SymbolSectionCandidate::select(InputContext * /*inputContext*/) const {
     section_->setSymbol(symbol_);
     emit<ZhuyinCandidate::selected>();
 }
@@ -55,7 +64,7 @@ SymbolZhuyinSectionCandidate::SymbolZhuyinSectionCandidate(
 
     : SymbolSectionCandidate(section, std::move(symbol)), offset_(offset) {}
 
-void SymbolZhuyinSectionCandidate::select(InputContext *) const {
+void SymbolZhuyinSectionCandidate::select(InputContext * /*unused*/) const {
     section_->buffer()->setZhuyinSymbolTo(section_, offset_, symbol_);
     emit<ZhuyinCandidate::selected>();
 }

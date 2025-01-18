@@ -7,10 +7,15 @@
 #ifndef _FCITX5_ZHUYIN_ZHUYINSECTION_H_
 #define _FCITX5_ZHUYIN_ZHUYINSECTION_H_
 
+#include <cstddef>
+#include <cstdint>
 #include <fcitx-utils/inputbuffer.h>
 #include <fcitx-utils/misc.h>
 #include <functional>
 #include <list>
+#include <memory>
+#include <string>
+#include <utility>
 #include <zhuyin.h>
 
 namespace fcitx {

@@ -5,9 +5,15 @@
  *
  */
 #include "zhuyinsymbol.h"
+#include <cstddef>
+#include <cstdio>
 #include <fcitx-utils/log.h>
 #include <fcitx-utils/macros.h>
+#include <fcitx-utils/misc.h>
 #include <fcitx-utils/stringutils.h>
+#include <string>
+#include <utility>
+#include <vector>
 
 namespace fcitx {
 

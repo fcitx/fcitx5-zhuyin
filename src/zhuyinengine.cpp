@@ -5,21 +5,45 @@
  *
  */
 #include "zhuyinengine.h"
+#include "quickphrase_public.h"
 #include "zhuyincandidate.h"
+#include <cstddef>
+#include <cstdio>
 #include <fcitx-config/iniparser.h>
+#include <fcitx-config/rawconfig.h>
+#include <fcitx-utils/capabilityflags.h>
 #include <fcitx-utils/charutils.h>
+#include <fcitx-utils/fs.h>
+#include <fcitx-utils/i18n.h>
+#include <fcitx-utils/key.h>
+#include <fcitx-utils/keysym.h>
+#include <fcitx-utils/keysymgen.h>
 #include <fcitx-utils/log.h>
+#include <fcitx-utils/misc.h>
 #include <fcitx-utils/standardpath.h>
+#include <fcitx-utils/stringutils.h>
 #include <fcitx-utils/utf8.h>
+#include <fcitx/addoninstance.h>
+#include <fcitx/candidatelist.h>
+#include <fcitx/event.h>
 #include <fcitx/instance.h>
 #include <fcitx/statusarea.h>
+#include <fcitx/text.h>
+#include <fcitx/userinterface.h>
 #include <fcitx/userinterfacemanager.h>
 #include <fcntl.h>
 #include <fmt/format.h>
+#include <limits>
+#include <memory>
+#include <string>
+#include <utility>
 #include <zhuyin.h>
+
+namespace {
 
 FCITX_DEFINE_LOG_CATEGORY(zhuyin, "zhuyin");
 #define ZHUYIN_DEBUG() FCITX_LOGC(zhuyin, Debug)
+} // namespace
 
 namespace fcitx {
 
@@ -51,102 +75,121 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
         auto idx = key.keyListIndex(engine_->selectionKeys());
         if (idx >= 0) {
             candidateList->candidate(idx).select(ic);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (candidateList->cursorIndex() >= 0 &&
             (key.check(FcitxKey_space) || key.check(FcitxKey_Return))) {
             candidateList->candidate(candidateList->cursorIndex()).select(ic);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.checkKeyList(*engine_->config().prevPage)) {
             candidateList->toPageable()->prev();
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.checkKeyList(*engine_->config().nextPage)) {
             candidateList->toPageable()->next();
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.checkKeyList(*engine_->config().prevCandidate)) {
             candidateList->toCursorMovable()->prevCandidate();
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.checkKeyList(*engine_->config().nextCandidate)) {
             candidateList->toCursorMovable()->nextCandidate();
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.check(FcitxKey_Escape)) {
             ic->inputPanel().setCandidateList(nullptr);
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Home)) {
             candidateList->toPageable()->setPage(0);
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_End)) {
             candidateList->toPageable()->setPage(
                 candidateList->toPageable()->totalPages() - 1);
             ic_->updateUserInterface(UserInterfaceComponent::InputPanel);
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
-        return keyEvent.filterAndAccept();
+        keyEvent.filterAndAccept();
+        return;
     }
 
     if (!buffer_.empty()) {
         if (key.check(FcitxKey_Home)) {
             buffer_.moveCursorToBeginning();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_End)) {
             buffer_.moveCursorToEnd();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Escape)) {
             reset();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_BackSpace)) {
             buffer_.backspace();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Delete)) {
             buffer_.del();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Return)) {
             commit();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Left)) {
             buffer_.moveCursorLeft();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Right)) {
             buffer_.moveCursorRight();
             updateUI();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
         if (key.check(FcitxKey_Return, KeyState::Shift)) {
             ic->commitString(buffer_.rawText());
             reset();
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
 
         if (key.check(FcitxKey_Down)) {
@@ -154,7 +197,8 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
         }
 
         if (key.isCursorMove()) {
-            return keyEvent.filterAndAccept();
+            keyEvent.filterAndAccept();
+            return;
         }
     }
 
@@ -163,7 +207,8 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
         if (key.check(*engine_->config().quickphraseKey) &&
             engine_->quickphrase()) {
             std::string keyString;
-            std::string output, altOutput;
+            std::string output;
+            std::string altOutput;
             if (c) {
                 keyString = utf8::UCS4ToUTF8(c);
                 altOutput = keyString;
@@ -278,7 +323,7 @@ ZhuyinEngine::ZhuyinEngine(Instance *instance)
     reloadConfig();
 }
 
-void ZhuyinEngine::activate(const InputMethodEntry &,
+void ZhuyinEngine::activate(const InputMethodEntry & /*entry*/,
                             InputContextEvent &event) {
     auto *inputContext = event.inputContext();
     // Request full width.
@@ -304,12 +349,14 @@ void ZhuyinEngine::deactivate(const InputMethodEntry &entry,
     reset(entry, event);
 }
 
-void ZhuyinEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
+void ZhuyinEngine::keyEvent(const InputMethodEntry & /*entry*/,
+                            KeyEvent &keyEvent) {
     auto *state = keyEvent.inputContext()->propertyFor(&factory_);
     state->keyEvent(keyEvent);
 }
 
-void ZhuyinEngine::reset(const InputMethodEntry &, InputContextEvent &event) {
+void ZhuyinEngine::reset(const InputMethodEntry & /*entry*/,
+                         InputContextEvent &event) {
     auto *state = event.inputContext()->propertyFor(&factory_);
     state->reset();
 }
@@ -522,4 +569,4 @@ void ZhuyinEngine::reloadConfig() {
 
 } // namespace fcitx
 
-FCITX_ADDON_FACTORY(fcitx::ZhuyinEngineFactory);
+FCITX_ADDON_FACTORY_V2(zhuyin, fcitx::ZhuyinEngineFactory);

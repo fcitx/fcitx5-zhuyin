@@ -9,10 +9,14 @@
 
 #include "zhuyinsection.h"
 #include "zhuyinsymbol.h"
+#include <cstddef>
+#include <cstdint>
 #include <fcitx-utils/misc.h>
 #include <fcitx/text.h>
+#include <functional>
 #include <list>
-#include <variant>
+#include <memory>
+#include <string>
 #include <zhuyin.h>
 
 namespace fcitx {

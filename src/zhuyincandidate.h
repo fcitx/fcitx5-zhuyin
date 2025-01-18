@@ -8,8 +8,10 @@
 #define _FCITX5_ZHUYIN_ZHUYINCANDIDATE_H_
 
 #include "zhuyinsection.h"
+#include <cstddef>
 #include <fcitx-utils/connectableobject.h>
 #include <fcitx/candidatelist.h>
+#include <string>
 
 namespace fcitx {
 
@@ -28,7 +30,7 @@ class ZhuyinSectionCandidate : public ZhuyinCandidate {
 public:
     ZhuyinSectionCandidate(SectionIterator section, unsigned int i);
     bool isZhuyin() const override { return true; }
-    void select(InputContext *) const override;
+    void select(InputContext * /*inputContext*/) const override;
     FCITX_DECLARE_SIGNAL(ZhuyinSectionCandidate, selected,
                          void(SectionIterator));
 
@@ -42,7 +44,7 @@ private:
 class SymbolSectionCandidate : public ZhuyinCandidate {
 public:
     SymbolSectionCandidate(SectionIterator section, std::string symbol);
-    void select(InputContext *) const override;
+    void select(InputContext * /*inputContext*/) const override;
 
 protected:
     FCITX_DEFINE_SIGNAL(ZhuyinSectionCandidate, selected);
@@ -55,7 +57,7 @@ class SymbolZhuyinSectionCandidate : public SymbolSectionCandidate {
 public:
     SymbolZhuyinSectionCandidate(SectionIterator section, std::string symbol,
                                  size_t offset);
-    void select(InputContext *) const override;
+    void select(InputContext * /*unused*/) const override;
 
 private:
     size_t offset_;

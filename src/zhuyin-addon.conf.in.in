@@ -8,6 +8,9 @@ Type=SharedLibrary
 OnDemand=True
 Configurable=True
 
+[Addon/Dependencies]
+0=core:@REQUIRED_FCITX_VERSION@
+
 [Addon/OptionalDependencies]
 0=fullwidth
 1=chttrans

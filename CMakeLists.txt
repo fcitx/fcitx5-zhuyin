@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.4.0)
+cmake_minimum_required(VERSION 3.12)
 
 project(fcitx5-zhuyin VERSION 5.1.2)
 
+set(REQUIRED_FCITX_VERSION 5.1.12)
 find_package(ECM 1.0.0 REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 include(FeatureSummary)
@@ -10,7 +11,7 @@ include(ECMSetupVersion)
 include(ECMUninstallTarget)
 
 find_package(Gettext REQUIRED)
-find_package(Fcitx5Core 5.0.2 REQUIRED)
+find_package(Fcitx5Core ${REQUIRED_FCITX_VERSION} REQUIRED)
 find_package(Fcitx5Module REQUIRED COMPONENTS Notifications QuickPhrase)
 find_package(PkgConfig REQUIRED)
 find_package(fmt REQUIRED)

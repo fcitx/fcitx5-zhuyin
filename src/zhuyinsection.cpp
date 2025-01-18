@@ -7,8 +7,21 @@
 #include "zhuyinsection.h"
 #include "zhuyinbuffer.h"
 #include "zhuyincandidate.h"
+#include <cassert>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <fcitx-utils/inputbuffer.h>
 #include <fcitx-utils/utf8.h>
+#include <functional>
+#include <glib.h>
 #include <limits>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <zhuyin.h>
 
 namespace fcitx {
 
@@ -74,7 +87,8 @@ size_t ZhuyinSection::nextChar() const {
     if (cursor() + 1 >= length) {
         return cursor() + 1;
     }
-    size_t offset = 0, right = 0;
+    size_t offset = 0;
+    size_t right = 0;
     size_t nextCursor = cursor() + 1;
     zhuyin_get_zhuyin_offset(instance_.get(), nextCursor, &offset);
     zhuyin_get_right_zhuyin_offset(instance_.get(), offset, &right);

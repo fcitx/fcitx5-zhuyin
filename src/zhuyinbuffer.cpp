@@ -6,9 +6,22 @@
  */
 #include "zhuyinbuffer.h"
 #include "zhuyincandidate.h"
+#include "zhuyinsection.h"
 #include <cassert>
+#include <cstddef>
+#include <cstdint>
 #include <fcitx-utils/charutils.h>
+#include <fcitx-utils/textformatflags.h>
+#include <fcitx/text.h>
+#include <functional>
+#include <glib.h>
+#include <iterator>
+#include <limits>
+#include <memory>
 #include <sstream>
+#include <string>
+#include <utility>
+#include <zhuyin.h>
 
 namespace fcitx {
 
