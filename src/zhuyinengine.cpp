@@ -32,7 +32,6 @@
 #include <fcitx/userinterface.h>
 #include <fcitx/userinterfacemanager.h>
 #include <fcntl.h>
-#include <fmt/format.h>
 #include <limits>
 #include <memory>
 #include <string>
@@ -223,15 +222,13 @@ void ZhuyinState::keyEvent(KeyEvent &keyEvent) {
             }
 
             if (!output.empty() && !altOutput.empty()) {
-                std::string text =
-                    fmt::format(_("Press {} for {} and Return for {}"),
-                                keyString, output, altOutput);
+                std::string text = _("Press {0} for {1} and Return for {2}",
+                                     keyString, output, altOutput);
                 engine_->quickphrase()->call<IQuickPhrase::trigger>(
                     ic, text, "", output, altOutput,
                     *engine_->config().quickphraseKey);
             } else if (!output.empty()) {
-                std::string text =
-                    fmt::format(_("Press {} for {}"), keyString, output);
+                std::string text = _("Press {0} for {1}", keyString, output);
                 engine_->quickphrase()->call<IQuickPhrase::trigger>(
                     ic, text, "", output, altOutput,
                     *engine_->config().quickphraseKey);
