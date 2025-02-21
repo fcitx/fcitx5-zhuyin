@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2024-07-08 20:24+0000\n"
+"POT-Creation-Date: 2025-02-21 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/fcitx/teams/12005/"
@@ -23,121 +23,121 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/zhuyin.conf.in:3
+#: src/zhuyin.conf.in:2
 msgid "Bopomofo"
 msgstr "ㄅㄆㄇㄈ"
 
-#: src/zhuyinengine.h:80
+#: src/zhuyinengine.h:90
 msgid "Commit current preedit when switching to other input method"
 msgstr "切換至其他輸入法時提交目前的預編輯字串"
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Dachen CP26"
 msgstr "Dachen CP26"
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "Eten"
 msgstr "倚天"
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "Eten26"
 msgstr "倚天26"
 
-#: src/zhuyinengine.h:113
+#: src/zhuyinengine.h:123
 msgid "Fuzzy"
 msgstr "模糊"
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "GinYieh"
 msgstr "精業"
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Hanyu"
 msgstr "Hanyu"
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "Hsu"
 msgstr "許氏"
 
-#: src/zhuyinengine.h:55
+#: src/zhuyinengine.h:65
 msgid "Hsu Dvorak"
 msgstr "許氏 Dvorak"
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "IBM"
 msgstr "IBM"
 
-#: src/zhuyinengine.h:74
+#: src/zhuyinengine.h:84
 msgid "Layout"
 msgstr "佈局"
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Luoma"
 msgstr "Luoma"
 
-#: src/zhuyinengine.h:110
+#: src/zhuyinengine.h:120
 msgid "Next Candidate"
 msgstr "下一個候選字"
 
-#: src/zhuyinengine.h:98
+#: src/zhuyinengine.h:108
 msgid "Next Page"
 msgstr "下一頁"
 
-#: src/zhuyinengine.h:81
+#: src/zhuyinengine.h:91
 msgid "Page size"
 msgstr "頁面大小"
 
-#: src/zhuyinengine.cpp:186
+#: src/zhuyinengine.cpp:231
 #, c++-format
-msgid "Press {} for {}"
-msgstr "按 {} 進入 {}"
+msgid "Press {0} for {1}"
+msgstr ""
 
-#: src/zhuyinengine.cpp:181
+#: src/zhuyinengine.cpp:225
 #, c++-format
-msgid "Press {} for {} and Return for {}"
-msgstr "按 {} 進入 {} 與 Return 進入 {}"
+msgid "Press {0} for {1} and Return for {2}"
+msgstr ""
 
-#: src/zhuyinengine.h:104
+#: src/zhuyinengine.h:114
 msgid "Prev Candidate"
 msgstr "上一個候選字"
 
-#: src/zhuyinengine.h:92
+#: src/zhuyinengine.h:102
 msgid "Prev Page"
 msgstr "上一頁"
 
-#: src/zhuyinengine.h:85
+#: src/zhuyinengine.h:95
 msgid "QuickPhrase Trigger Key"
 msgstr "快速輸入切換鍵"
 
-#: src/zhuyinengine.h:88
+#: src/zhuyinengine.h:98
 msgid "QuickPhrase Trigger Key Symbol"
 msgstr "快速輸入切換鍵符號"
 
-#: src/zhuyinengine.h:77
+#: src/zhuyinengine.h:87
 msgid "Require tone in zhuyin"
 msgstr "在注音中需要聲調"
 
-#: src/zhuyinengine.h:57
+#: src/zhuyinengine.h:67
 msgid "Secondary Zhuyin"
 msgstr "次要注音"
 
-#: src/zhuyinengine.h:75
+#: src/zhuyinengine.h:85
 msgid "Selection Key"
 msgstr "選詞鍵"
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "Standard"
 msgstr "標準"
 
-#: src/zhuyinengine.h:55
+#: src/zhuyinengine.h:65
 msgid "Standard Dvorak"
 msgstr "標準 Dvorak"
 
-#: src/zhuyinengine.h:83
+#: src/zhuyinengine.h:93
 msgid "Use easy symbol"
 msgstr "使用簡易符號"
 
-#: src/zhuyin-addon.conf.in.in:3
+#: src/zhuyin-addon.conf.in.in:2
 msgid "Zhuyin"
 msgstr "注音"
 
@@ -145,7 +145,7 @@ msgstr "注音"
 msgid "Zhuyin For Fcitx 5"
 msgstr "Fcitx 5 的注音支援"
 
-#: src/zhuyin-addon.conf.in.in:4
+#: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin Input Method"
 msgstr "注音輸入法"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2024-03-01 20:24+0000\n"
+"POT-Creation-Date: 2025-02-21 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e "
 "<ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
@@ -21,121 +21,121 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: 2;\n"
 
-#: src/zhuyin.conf.in:3
+#: src/zhuyin.conf.in:2
 msgid "Bopomofo"
 msgstr ""
 
-#: src/zhuyinengine.h:80
+#: src/zhuyinengine.h:90
 msgid "Commit current preedit when switching to other input method"
 msgstr ""
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Dachen CP26"
 msgstr ""
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "Eten"
 msgstr ""
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "Eten26"
 msgstr ""
 
-#: src/zhuyinengine.h:113
+#: src/zhuyinengine.h:123
 msgid "Fuzzy"
 msgstr ""
 
-#: src/zhuyinengine.h:54
+#: src/zhuyinengine.h:64
 msgid "GinYieh"
 msgstr ""
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Hanyu"
 msgstr ""
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "Hsu"
 msgstr ""
 
-#: src/zhuyinengine.h:55
+#: src/zhuyinengine.h:65
 msgid "Hsu Dvorak"
 msgstr ""
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "IBM"
 msgstr "IBM"
 
-#: src/zhuyinengine.h:74
+#: src/zhuyinengine.h:84
 msgid "Layout"
 msgstr "פריסה"
 
-#: src/zhuyinengine.h:56
+#: src/zhuyinengine.h:66
 msgid "Luoma"
 msgstr ""
 
-#: src/zhuyinengine.h:110
+#: src/zhuyinengine.h:120
 msgid "Next Candidate"
 msgstr ""
 
-#: src/zhuyinengine.h:98
+#: src/zhuyinengine.h:108
 msgid "Next Page"
 msgstr "העמוד הבא"
 
-#: src/zhuyinengine.h:81
+#: src/zhuyinengine.h:91
 msgid "Page size"
 msgstr "גודל עמוד"
 
-#: src/zhuyinengine.cpp:189
+#: src/zhuyinengine.cpp:231
 #, c++-format
-msgid "Press {} for {}"
+msgid "Press {0} for {1}"
 msgstr ""
 
-#: src/zhuyinengine.cpp:182
+#: src/zhuyinengine.cpp:225
 #, c++-format
-msgid "Press {} for {} and Return for {}"
+msgid "Press {0} for {1} and Return for {2}"
 msgstr ""
 
-#: src/zhuyinengine.h:104
+#: src/zhuyinengine.h:114
 msgid "Prev Candidate"
 msgstr ""
 
-#: src/zhuyinengine.h:92
+#: src/zhuyinengine.h:102
 msgid "Prev Page"
 msgstr "העמוד הקודם"
 
-#: src/zhuyinengine.h:85
+#: src/zhuyinengine.h:95
 msgid "QuickPhrase Trigger Key"
 msgstr ""
 
-#: src/zhuyinengine.h:88
+#: src/zhuyinengine.h:98
 msgid "QuickPhrase Trigger Key Symbol"
 msgstr ""
 
-#: src/zhuyinengine.h:77
+#: src/zhuyinengine.h:87
 msgid "Require tone in zhuyin"
 msgstr ""
 
-#: src/zhuyinengine.h:57
+#: src/zhuyinengine.h:67
 msgid "Secondary Zhuyin"
 msgstr ""
 
-#: src/zhuyinengine.h:75
+#: src/zhuyinengine.h:85
 msgid "Selection Key"
 msgstr ""
 
-#: src/zhuyinengine.h:53
+#: src/zhuyinengine.h:63
 msgid "Standard"
 msgstr ""
 
-#: src/zhuyinengine.h:55
+#: src/zhuyinengine.h:65
 msgid "Standard Dvorak"
 msgstr ""
 
-#: src/zhuyinengine.h:83
+#: src/zhuyinengine.h:93
 msgid "Use easy symbol"
 msgstr ""
 
-#: src/zhuyin-addon.conf.in.in:3
+#: src/zhuyin-addon.conf.in.in:2
 msgid "Zhuyin"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr ""
 msgid "Zhuyin For Fcitx 5"
 msgstr ""
 
-#: src/zhuyin-addon.conf.in.in:4
+#: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin Input Method"
 msgstr ""
 
