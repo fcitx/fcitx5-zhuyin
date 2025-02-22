@@ -7,14 +7,15 @@
 # 黃柏諺 <s8321414@gmail.com>, 2020
 # bruh, 2020
 # Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024
+# Yiyu Liu, 2025
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-02-21 20:24+0000\n"
+"POT-Creation-Date: 2025-02-22 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024\n"
+"Last-Translator: Yiyu Liu, 2025\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/fcitx/teams/12005/"
 "zh_TW/)\n"
 "Language: zh_TW\n"
@@ -90,12 +91,12 @@ msgstr "頁面大小"
 #: src/zhuyinengine.cpp:231
 #, c++-format
 msgid "Press {0} for {1}"
-msgstr ""
+msgstr "按下 {0} 以輸入 {1}"
 
 #: src/zhuyinengine.cpp:225
 #, c++-format
 msgid "Press {0} for {1} and Return for {2}"
-msgstr ""
+msgstr "按下 {0} 以輸入 {1}，按下確認鍵以輸入 {2}"
 
 #: src/zhuyinengine.h:114
 msgid "Prev Candidate"
