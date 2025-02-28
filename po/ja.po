@@ -4,14 +4,15 @@
 #
 # Translators:
 # csslayer <wengxt@gmail.com>, 2020
+# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2025
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-02-21 20:24+0000\n"
+"POT-Creation-Date: 2025-02-28 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/fcitx/teams/12005/ja/)\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +26,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:90
 msgid "Commit current preedit when switching to other input method"
-msgstr ""
+msgstr "他の入力メソッドに切り替えるときに現在の編集内容を確定する"
 
 #: src/zhuyinengine.h:66
 msgid "Dachen CP26"
