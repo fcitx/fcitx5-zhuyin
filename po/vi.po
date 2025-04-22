@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-03-22 20:24+0000\n"
+"POT-Creation-Date: 2025-04-22 20:25+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
 "Last-Translator: hoanghuy309 <hoanghuy309@gmail.com>, 2025\n"
 "Language-Team: Vietnamese (https://app.transifex.com/fcitx/teams/12005/vi/)\n"
@@ -103,11 +103,11 @@ msgstr ""
 
 #: src/zhuyinengine.h:95
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "Phím Chuyển Đổi QuickPhrase"
 
 #: src/zhuyinengine.h:98
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "Biểu Tượng Phím Kích Hoạt QuickPhrase"
 
 #: src/zhuyinengine.h:87
 msgid "Require tone in zhuyin"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: src/zhuyinengine.h:85
 msgid "Selection Key"
-msgstr ""
+msgstr "Phím Lựa Chọn"
 
 #: src/zhuyinengine.h:63
 msgid "Standard"
