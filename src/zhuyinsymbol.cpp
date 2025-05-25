@@ -11,6 +11,8 @@
 #include <fcitx-utils/macros.h>
 #include <fcitx-utils/misc.h>
 #include <fcitx-utils/stringutils.h>
+#include <fcitx-utils/unixfd.h>
+#include <istream>
 #include <string>
 #include <utility>
 #include <vector>
@@ -30,22 +32,20 @@ ZhuyinSymbol::lookup(const std::string &key) const {
     }
     return empty;
 }
-
-void ZhuyinSymbol::load(std::FILE *file) {
+void ZhuyinSymbol::reset() {
     symbols_.clear();
     initBuiltin();
-
-    if (!file) {
-        for (char c = 'A'; c <= 'Z'; c++) {
-            char latin[] = {c, '\0'};
-            symbols_.erase(latin);
-        }
-        return;
+    for (char c = 'A'; c <= 'Z'; c++) {
+        char latin[] = {c, '\0'};
+        symbols_.erase(latin);
     }
-    UniqueCPtr<char> line;
-    size_t size = 0;
-    while (getline(line, &size, file) >= 0) {
-        auto trimmed = stringutils::trim(line.get());
+}
+
+void ZhuyinSymbol::load(std::istream &in) {
+    reset();
+    std::string line;
+    while (std::getline(in, line)) {
+        auto trimmed = stringutils::trimView(line);
         if (trimmed.empty()) {
             continue;
         }
@@ -58,8 +58,8 @@ void ZhuyinSymbol::load(std::FILE *file) {
         }
 
         std::vector<std::string> items;
-        items.push_back(std::move(value));
-        items.push_back(key);
+        items.push_back(std::string(value));
+        items.push_back(std::string(key));
         if (auto iter = symbolToGroup_.find(items[0]);
             iter != symbolToGroup_.end()) {
             for (const auto &item : groups_[iter->second]) {
@@ -68,7 +68,7 @@ void ZhuyinSymbol::load(std::FILE *file) {
                 }
             }
         }
-        symbols_[key] = std::move(items);
+        symbols_[std::string(key)] = std::move(items);
     }
 }
 

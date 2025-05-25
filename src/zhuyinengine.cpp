@@ -13,6 +13,7 @@
 #include <fcitx-config/rawconfig.h>
 #include <fcitx-utils/capabilityflags.h>
 #include <fcitx-utils/charutils.h>
+#include <fcitx-utils/fdstreambuf.h>
 #include <fcitx-utils/fs.h>
 #include <fcitx-utils/i18n.h>
 #include <fcitx-utils/key.h>
@@ -20,7 +21,7 @@
 #include <fcitx-utils/keysymgen.h>
 #include <fcitx-utils/log.h>
 #include <fcitx-utils/misc.h>
-#include <fcitx-utils/standardpath.h>
+#include <fcitx-utils/standardpaths.h>
 #include <fcitx-utils/stringutils.h>
 #include <fcitx-utils/utf8.h>
 #include <fcitx/addoninstance.h>
@@ -32,6 +33,7 @@
 #include <fcitx/userinterface.h>
 #include <fcitx/userinterfacemanager.h>
 #include <fcntl.h>
+#include <istream>
 #include <limits>
 #include <memory>
 #include <string>
@@ -304,17 +306,17 @@ ZhuyinEngine::ZhuyinEngine(Instance *instance)
     : instance_(instance), factory_([this](InputContext &ic) {
           return new ZhuyinState(this, &ic);
       }) {
-    auto userDir = stringutils::joinPath(
-        StandardPath::global().userDirectory(StandardPath::Type::PkgData),
-        "zhuyin");
+    auto userDir =
+        StandardPaths::global().userDirectory(StandardPathsType::PkgData) /
+        "zhuyin";
     if (!fs::makePath(userDir)) {
         if (fs::isdir(userDir)) {
             ZHUYIN_DEBUG() << "Failed to create user directory: " << userDir;
         }
     }
-    context_.reset(
-        zhuyin_init(StandardPath::fcitxPath("pkgdatadir", "zhuyin").data(),
-                    userDir.data()));
+    context_.reset(zhuyin_init(
+        StandardPaths::fcitxPath("pkgdatadir", "zhuyin").string().c_str(),
+        userDir.string().c_str()));
 
     instance->inputContextManager().registerProperty("zhuyinState", &factory_);
     reloadConfig();
@@ -368,20 +370,16 @@ const Configuration *ZhuyinEngine::getConfig() const { return &config_; }
 
 void ZhuyinEngine::reloadConfig() {
     readAsIni(config_, "conf/zhuyin.conf");
-    // Keep fd live before fclose.
-    StandardPathFile fd;
-    UniqueFilePtr file;
+    symbol_.reset();
     if (*config_.useEasySymbol) {
-        fd = StandardPath::global().open(StandardPath::Type::PkgData,
-                                         "zhuyin/easysymbols.txt", O_RDONLY);
+        UnixFD fd = StandardPaths::global().open(StandardPathsType::PkgData,
+                                                 "zhuyin/easysymbols.txt");
         if (fd.isValid()) {
-            file.reset(fdopen(fd.fd(), "r"));
-            if (file) {
-                fd.release();
-            }
+            IFDStreamBuf buf(std::move(fd));
+            std::istream in(&buf);
+            symbol_.load(in);
         }
     }
-    symbol_.load(file.get());
 
     isZhuyin_ = true;
     ZhuyinScheme scheme = ZHUYIN_STANDARD;
