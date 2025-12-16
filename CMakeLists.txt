@@ -35,11 +35,20 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 include("${FCITX_INSTALL_CMAKECONFIG_DIR}/Fcitx5Utils/Fcitx5CompilerSettings.cmake")
 
+option(ENABLE_TEST "Build Test" On)
+option(ENABLE_DATA "Build data" On)
+
 add_subdirectory(po)
 add_subdirectory(src)
-add_subdirectory(data)
-enable_testing()
-add_subdirectory(test)
+
+if(ENABLE_DATA)
+    add_subdirectory(data)
+endif()
+
+if(ENABLE_TEST)
+    enable_testing()
+    add_subdirectory(test)
+endif()
 
 fcitx5_translate_desktop_file(org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in
                               org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml XML)
