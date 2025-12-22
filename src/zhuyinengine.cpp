@@ -306,17 +306,17 @@ ZhuyinEngine::ZhuyinEngine(Instance *instance)
     : instance_(instance), factory_([this](InputContext &ic) {
           return new ZhuyinState(this, &ic);
       }) {
-    auto userDir =
-        StandardPaths::global().userDirectory(StandardPathsType::PkgData) /
-        "zhuyin";
+    const auto &sp = StandardPaths::global();
+    auto userDir = sp.userDirectory(StandardPathsType::PkgData) / "zhuyin";
     if (!fs::makePath(userDir)) {
         if (fs::isdir(userDir)) {
             ZHUYIN_DEBUG() << "Failed to create user directory: " << userDir;
         }
     }
-    context_.reset(zhuyin_init(
-        StandardPaths::fcitxPath("pkgdatadir", "zhuyin").string().c_str(),
-        userDir.string().c_str()));
+    std::string tablePath =
+        sp.locate(StandardPathsType::PkgData, "zhuyin/table.conf");
+    context_.reset(zhuyin_init(fcitx::fs::dirName(tablePath).c_str(),
+                               userDir.string().c_str()));
 
     instance->inputContextManager().registerProperty("zhuyinState", &factory_);
     reloadConfig();
