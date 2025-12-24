@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the fcitx5-zhuyin package.
 #
 # Translators:
-# csslayer <wengxt@gmail.com>, 2020
+# Xuetian Weng <wengxt@gmail.com>, 2020
+# Emir SARI, 2025
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-zhuyin\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-02-21 20:24+0000\n"
+"POT-Creation-Date: 2025-12-24 20:24+0000\n"
 "PO-Revision-Date: 2020-08-15 06:17+0000\n"
-"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
+"Last-Translator: Emir SARI, 2025\n"
 "Language-Team: Turkish (https://app.transifex.com/fcitx/teams/12005/tr/)\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +26,11 @@ msgstr "Bopomofo"
 
 #: src/zhuyinengine.h:90
 msgid "Commit current preedit when switching to other input method"
-msgstr ""
+msgstr "Başka bir giriş yöntemine geçildiğinde geçerli ön düzenlemeyi kaydet"
 
 #: src/zhuyinengine.h:66
 msgid "Dachen CP26"
-msgstr ""
+msgstr "Dachen CP26"
 
 #: src/zhuyinengine.h:64
 msgid "Eten"
@@ -41,7 +42,7 @@ msgstr "Eten26"
 
 #: src/zhuyinengine.h:123
 msgid "Fuzzy"
-msgstr ""
+msgstr "Bulanık"
 
 #: src/zhuyinengine.h:64
 msgid "GinYieh"
@@ -49,7 +50,7 @@ msgstr "GinYieh"
 
 #: src/zhuyinengine.h:66
 msgid "Hanyu"
-msgstr ""
+msgstr "Hanyu"
 
 #: src/zhuyinengine.h:63
 msgid "Hsu"
@@ -65,61 +66,61 @@ msgstr "IBM"
 
 #: src/zhuyinengine.h:84
 msgid "Layout"
-msgstr ""
+msgstr "Yerleşim"
 
 #: src/zhuyinengine.h:66
 msgid "Luoma"
-msgstr ""
+msgstr "Luoma"
 
 #: src/zhuyinengine.h:120
 msgid "Next Candidate"
-msgstr ""
+msgstr "Sonraki Aday"
 
 #: src/zhuyinengine.h:108
 msgid "Next Page"
-msgstr ""
+msgstr "Sonraki Sayfa"
 
 #: src/zhuyinengine.h:91
 msgid "Page size"
-msgstr ""
+msgstr "Sayfa boyutu"
 
-#: src/zhuyinengine.cpp:231
+#: src/zhuyinengine.cpp:233
 #, c++-format
 msgid "Press {0} for {1}"
-msgstr ""
+msgstr "{1} için {0} düğmesine basın"
 
-#: src/zhuyinengine.cpp:225
+#: src/zhuyinengine.cpp:227
 #, c++-format
 msgid "Press {0} for {1} and Return for {2}"
-msgstr ""
+msgstr "{1} için {0} düğmesine ve {2} için Dönüş düğmesine basın"
 
 #: src/zhuyinengine.h:114
 msgid "Prev Candidate"
-msgstr ""
+msgstr "Önceki Aday"
 
 #: src/zhuyinengine.h:102
 msgid "Prev Page"
-msgstr ""
+msgstr "Önceki Sayfa"
 
 #: src/zhuyinengine.h:95
 msgid "QuickPhrase Trigger Key"
-msgstr ""
+msgstr "Hızlı İfade Tetik Düğmesi"
 
 #: src/zhuyinengine.h:98
 msgid "QuickPhrase Trigger Key Symbol"
-msgstr ""
+msgstr "Hızlı İfade Tetik Düğmesi Sembolü"
 
 #: src/zhuyinengine.h:87
 msgid "Require tone in zhuyin"
-msgstr ""
+msgstr "Zhuyin’de ton gerektir"
 
 #: src/zhuyinengine.h:67
 msgid "Secondary Zhuyin"
-msgstr ""
+msgstr "İkincil Zhuyin"
 
 #: src/zhuyinengine.h:85
 msgid "Selection Key"
-msgstr ""
+msgstr "Seçim Düğmesi"
 
 #: src/zhuyinengine.h:63
 msgid "Standard"
@@ -127,11 +128,11 @@ msgstr "Standart"
 
 #: src/zhuyinengine.h:65
 msgid "Standard Dvorak"
-msgstr "Standard Dvorak"
+msgstr "Standart Dvorak"
 
 #: src/zhuyinengine.h:93
 msgid "Use easy symbol"
-msgstr ""
+msgstr "Kolay sembol kullan"
 
 #: src/zhuyin-addon.conf.in.in:2
 msgid "Zhuyin"
@@ -139,12 +140,12 @@ msgstr "Zhuyin"
 
 #: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:7
 msgid "Zhuyin For Fcitx 5"
-msgstr ""
+msgstr "Fcitx 5 için Zhuyin"
 
 #: src/zhuyin-addon.conf.in.in:3
 msgid "Zhuyin Input Method"
-msgstr ""
+msgstr "Zhuyin Giriş Yöntemi"
 
 #: org.fcitx.Fcitx5.Addon.Zhuyin.metainfo.xml.in:8
 msgid "Zhuyin input method based on libpinyin"
-msgstr ""
+msgstr "Zhuyin giriş yöntemi libpinyin tabanlıdır"
